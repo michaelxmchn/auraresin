@@ -1,12 +1,8 @@
 {
-  "name": "auraresin",
   "version": 2,
   "functions": {
     "api/subscribe.js": {
       "runtime": "nodejs18.x"
     }
-  },
-  "dependencies": {
-    "resend": "^4.0.0"
   }
 }
