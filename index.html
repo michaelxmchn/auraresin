@@ -200,8 +200,12 @@ body { background-color: #F5F5F7; }
 <p class="font-body text-sm text-on-primary/70" data-i18n="footer.alerttext">Be the first to know when new luminous depth pieces arrive.</p>
 </div>
 <div class="flex w-full md:w-auto space-x-2">
-<input class="bg-surface-container/20 border border-white/30 rounded-lg px-4 py-3 text-on-primary placeholder-on-primary/50 focus:outline-none focus:border-white w-full md:w-64 font-body text-sm" placeholder="Your email address" type="email"/>
-<button class="bg-white text-primary font-body text-sm px-6 py-3 rounded-lg hover:bg-surface-container transition-colors uppercase tracking-wider" data-i18n="footer.notify">Notify Me</button>
+<input id="notify-email" class="bg-surface-container/20 border border-white/30 rounded-lg px-4 py-3 text-on-primary placeholder-on-primary/50 focus:outline-none focus:border-white w-full md:w-64 font-body text-sm" placeholder="Your email address" type="email"/>
+<button onclick="submitNotify()" class="bg-white text-primary font-body text-sm px-6 py-3 rounded-lg hover:bg-surface-container transition-colors uppercase tracking-wider" data-i18n="footer.notify">Notify Me</button>
+</div>
+</div>
+<div id="notify-success" class="hidden text-center py-4">
+<p class="font-body text-sm text-on-primary font-semibold" data-i18n="footer.success">Thank you! You're on the list.</p>
 </div>
 </div>
 <div class="w-full border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
@@ -317,6 +321,32 @@ function applyFilters() {
   if (activeFilter !== 'all' && card.dataset.category !== activeFilter) show = false;
   card.style.display = show ? '' : 'none';
  });
+}
+
+// ===== NOTIFY FORM =====
+async function submitNotify() {
+ const emailInput = document.getElementById('notify-email');
+ const email = emailInput.value.trim();
+ if (!email || !email.includes('@')) {
+  alert('Please enter a valid email address');
+  return;
+ }
+ try {
+  const res = await fetch('/api/subscribe', {
+   method: 'POST',
+   headers: { 'Content-Type': 'application/json' },
+   body: JSON.stringify({ email })
+  });
+  const data = await res.json();
+  if (data.success) {
+   document.querySelector('.glass-card').classList.add('hidden');
+   document.getElementById('notify-success').classList.remove('hidden');
+  } else {
+   alert('Subscription failed. Please try again.');
+  }
+ } catch (err) {
+  alert('Network error. Please try again.');
+ }
 }
 </script>
 </body>
