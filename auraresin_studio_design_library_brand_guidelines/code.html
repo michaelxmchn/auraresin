@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AuraResin Studio - Design Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#454749",
+                    "primary": "#000000",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#e5e2e1",
+                    "on-surface-variant": "#444748",
+                    "surface-container-low": "#f4f3f8",
+                    "surface": "#faf9fe",
+                    "inverse-primary": "#c8c6c5",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "background": "#faf9fe",
+                    "surface-dim": "#dad9df",
+                    "tertiary": "#000000",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#e9e7ed",
+                    "outline-variant": "#c4c7c7",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "error-container": "#ffdad6",
+                    "surface-container-highest": "#e3e2e7",
+                    "on-primary-fixed": "#1c1b1b",
+                    "on-tertiary-container": "#838484",
+                    "on-secondary-container": "#616365",
+                    "secondary-container": "#dfdfe1",
+                    "on-primary-fixed-variant": "#474646",
+                    "primary-container": "#1c1b1b",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e3e2e7",
+                    "on-primary-container": "#858383",
+                    "outline": "#747878",
+                    "secondary-fixed": "#e2e2e4",
+                    "secondary": "#5d5e60",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "secondary-fixed-dim": "#c6c6c8",
+                    "surface-tint": "#5f5e5e",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#1a1b1f",
+                    "on-surface": "#1a1b1f",
+                    "inverse-on-surface": "#f1f0f5",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed": "#e2e2e2",
+                    "tertiary-container": "#1a1c1c",
+                    "inverse-surface": "#2f3034",
+                    "surface-bright": "#faf9fe",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#eeedf3",
+                    "on-secondary-fixed": "#1a1c1d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "max-width": "1440px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "headline-md": [
+                            "Playfair Display"
+                    ],
+                    "headline-sm": [
+                            "Playfair Display"
+                    ],
+                    "display-lg": [
+                            "Playfair Display"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "display-lg-mobile": [
+                            "Playfair Display"
+                    ],
+                    "button": [
+                            "Inter"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "label-caps": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-sm": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "display-lg": [
+                            "64px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg-mobile": [
+                            "40px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "button": [
+                            "14px",
+                            {
+                                    "lineHeight": "1",
+                                    "letterSpacing": "0.02em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "letterSpacing": "0.01em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "1",
+                                    "letterSpacing": "0.1em",
+                                    "fontWeight": "600"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid #EEEEEE;
+            box-shadow: inset 1px 1px 0px rgba(255,255,255,1), 0 10px 40px rgba(0,0,0,0.04);
+        }
+        .resin-overlay {
+            position: relative;
+        }
+        .resin-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%);
+            pointer-events: none;
+            border-radius: inherit;
+        }
+        body {
+            background-color: #F5F5F7;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-md text-body-md antialiased selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation (Standard) -->
+<nav class="bg-surface/70 dark:bg-surface-container-low/70 backdrop-blur-xl w-full top-0 sticky z-40 border-b border-outline-variant/30 shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-max-width mx-auto py-4">
+<div class="font-display-lg text-headline-md text-primary dark:text-on-primary-fixed">
+                AuraResin
+            </div>
+<div class="hidden md:flex gap-6 items-center">
+<a class="font-label-caps text-label-caps text-secondary dark:text-on-secondary-container hover:text-primary dark:hover:text-on-primary-fixed transition-colors duration-300" href="#">All Works</a>
+<a class="font-label-caps text-label-caps text-secondary dark:text-on-secondary-container hover:text-primary dark:hover:text-on-primary-fixed transition-colors duration-300" href="#">Indoor Elite</a>
+<a class="font-label-caps text-label-caps text-secondary dark:text-on-secondary-container hover:text-primary dark:hover:text-on-primary-fixed transition-colors duration-300" href="#">Garden &amp; Outdoor</a>
+<a class="font-label-caps text-label-caps text-secondary dark:text-on-secondary-container hover:text-primary dark:hover:text-on-primary-fixed transition-colors duration-300" href="#">Our Studio</a>
+</div>
+<div class="flex items-center gap-4 text-primary dark:text-on-primary-fixed">
+<button class="hover:text-primary dark:hover:text-on-primary-fixed transition-colors duration-300 active:opacity-80 active:scale-95">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="hover:text-primary dark:hover:text-on-primary-fixed transition-colors duration-300 active:opacity-80 active:scale-95">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- SideNavBar (System Switcher - Fixed on actual implementation, rendered static here for demo) -->
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 md:hidden hidden">
+<div class="bg-surface-container-lowest/80 dark:bg-surface-container-highest/80 backdrop-blur-md rounded-full border border-outline-variant/20 shadow-md flex items-center gap-2 p-1">
+<button class="bg-tertiary dark:bg-tertiary-fixed text-on-tertiary dark:text-on-tertiary-fixed rounded-full px-6 py-2 flex items-center gap-2 transition-all duration-500 ease-in-out">
+<span class="material-symbols-outlined text-[18px]">storefront</span>
+<span class="font-label-caps text-label-caps hidden sm:block">View Storefront Gallery</span>
+</button>
+<button class="text-on-surface-variant dark:text-on-surface-variant px-6 py-2 hover:bg-surface-container-high dark:hover:bg-surface-container rounded-full flex items-center gap-2 transition-all duration-500 ease-in-out">
+<span class="material-symbols-outlined text-[18px]">upload_file</span>
+<span class="font-label-caps text-label-caps hidden sm:block">Access Creator Upload Admin</span>
+</button>
+</div>
+</div>
+<main class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-24 space-y-24">
+<!-- Header -->
+<header class="space-y-6">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary max-w-4xl tracking-tight">Design Library &amp; Brand System</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl leading-relaxed">
+                A comprehensive guide to the visual identity and structural components of AuraResin Studio. Grounded in minimalism and glassmorphism, reflecting the clarity and depth of our medium.
+            </p>
+</header>
+<!-- Color Palette -->
+<section class="space-y-12">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mb-2 border-b border-outline-variant/30 pb-4 inline-block">Color Architecture</h2>
+<p class="font-body-md text-body-md text-secondary mt-4">The palette is strictly controlled to maintain a serene, gallery-like atmosphere, allowing the resin artwork to hold focus.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<!-- Color Swatch -->
+<div class="space-y-3">
+<div class="h-32 w-full bg-primary rounded-xl shadow-sm border border-outline-variant/20 relative overflow-hidden group">
+<div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-primary">Obsidian (Primary)</p>
+<p class="font-body-md text-body-md text-secondary text-sm">#000000</p>
+</div>
+</div>
+<div class="space-y-3">
+<div class="h-32 w-full bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/20 relative overflow-hidden group">
+<div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-primary">Pure White (Containers)</p>
+<p class="font-body-md text-body-md text-secondary text-sm">#FFFFFF</p>
+</div>
+</div>
+<div class="space-y-3">
+<div class="h-32 w-full bg-[#F5F5F7] rounded-xl shadow-sm border border-outline-variant/20 relative overflow-hidden group">
+<div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-primary">Studio Soft Grey (Base)</p>
+<p class="font-body-md text-body-md text-secondary text-sm">#F5F5F7</p>
+</div>
+</div>
+<div class="space-y-3">
+<div class="h-32 w-full bg-surface-variant rounded-xl shadow-sm border border-outline-variant/20 relative overflow-hidden group">
+<div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-primary">Surface Variant</p>
+<p class="font-body-md text-body-md text-secondary text-sm">#E3E2E7</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Typography -->
+<section class="space-y-12">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mb-2 border-b border-outline-variant/30 pb-4 inline-block">Typography Scale</h2>
+<p class="font-body-md text-body-md text-secondary mt-4">Playfair Display anchors the aesthetic in classical luxury, while Inter provides crisp, functional utility.</p>
+</div>
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/20 p-8 space-y-8 glass-panel resin-overlay">
+<div class="grid md:grid-cols-4 gap-4 items-baseline border-b border-outline-variant/20 pb-6">
+<div class="font-label-caps text-label-caps text-secondary md:col-span-1">Display Large</div>
+<div class="md:col-span-3">
+<div class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary">Luminous Depth</div>
+<div class="font-body-md text-body-md text-secondary mt-2">Playfair Display / 64px / Bold / -2% Tracking</div>
+</div>
+</div>
+<div class="grid md:grid-cols-4 gap-4 items-baseline border-b border-outline-variant/20 pb-6">
+<div class="font-label-caps text-label-caps text-secondary md:col-span-1">Headline Medium</div>
+<div class="md:col-span-3">
+<div class="font-headline-md text-headline-md text-primary">Curated Collections</div>
+<div class="font-body-md text-body-md text-secondary mt-2">Playfair Display / 32px / SemiBold</div>
+</div>
+</div>
+<div class="grid md:grid-cols-4 gap-4 items-baseline border-b border-outline-variant/20 pb-6">
+<div class="font-label-caps text-label-caps text-secondary md:col-span-1">Body Large</div>
+<div class="md:col-span-3">
+<div class="font-body-lg text-body-lg text-primary max-w-2xl">The interplay of light and liquid medium creates unique visual textures that define each piece.</div>
+<div class="font-body-md text-body-md text-secondary mt-2">Inter / 18px / Regular</div>
+</div>
+</div>
+<div class="grid md:grid-cols-4 gap-4 items-baseline pb-2">
+<div class="font-label-caps text-label-caps text-secondary md:col-span-1">Label Caps</div>
+<div class="md:col-span-3">
+<div class="font-label-caps text-label-caps text-primary">Explore Gallery</div>
+<div class="font-body-md text-body-md text-secondary mt-2">Inter / 12px / SemiBold / +10% Tracking</div>
+</div>
+</div>
+</div>
+</section>
+<!-- UI Components -->
+<section class="space-y-12">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mb-2 border-b border-outline-variant/30 pb-4 inline-block">Component Inventory</h2>
+<p class="font-body-md text-body-md text-secondary mt-4">Interactive elements prioritize subtle feedback, clean edges, and distinct material states.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-12">
+<!-- Buttons & Actions -->
+<div class="space-y-8">
+<h3 class="font-headline-sm text-headline-sm text-primary">Interactive Elements</h3>
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-xl p-8 space-y-8">
+<div class="space-y-4">
+<p class="font-label-caps text-label-caps text-secondary">Primary Button (Obsidian)</p>
+<button class="bg-primary text-on-primary font-button text-button px-8 py-3 rounded-lg hover:opacity-90 transition-opacity active:scale-95 duration-200 w-fit">
+                                View Details
+                            </button>
+</div>
+<div class="space-y-4">
+<p class="font-label-caps text-label-caps text-secondary">Secondary Button (Resin Glass)</p>
+<button class="glass-panel text-primary font-button text-button px-8 py-3 rounded-lg hover:bg-surface-container-low transition-colors active:scale-95 duration-200 w-fit border border-outline-variant/30">
+                                Request Commission
+                            </button>
+</div>
+<div class="space-y-4">
+<p class="font-label-caps text-label-caps text-secondary">Pill Badge</p>
+<span class="bg-primary text-on-primary font-label-caps text-label-caps px-4 py-1.5 rounded-full inline-block">
+                                New Arrival
+                            </span>
+</div>
+<div class="space-y-4">
+<p class="font-label-caps text-label-caps text-secondary">Input Field</p>
+<input class="w-full bg-[#F5F5F7] border-0 text-primary font-body-md text-body-md placeholder:text-secondary px-4 py-3 rounded-xl focus:ring-1 focus:ring-primary focus:bg-white transition-all" placeholder="Enter email address" type="text"/>
+</div>
+</div>
+</div>
+<!-- Product Card Showcase (Bento Style) -->
+<div class="space-y-8">
+<h3 class="font-headline-sm text-headline-sm text-primary">Card Architecture</h3>
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-xl overflow-hidden hover:shadow-sm transition-shadow duration-300">
+<!-- Image placeholder simulating resin art -->
+<div class="h-64 bg-gradient-to-br from-gray-100 to-gray-300 relative overflow-hidden" data-alt="A close-up abstract macro photograph of poured epoxy resin art. The composition features smooth, flowing organic waves of deep obsidian black and pristine, translucent white. The surface is highly glossy, reflecting a high-key, soft white light source, typical of a modern art gallery setting. The mood is serene, structural, and luxurious, emphasizing the physical depth and clarity of the liquid medium frozen in time." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuARVpTDuDPxnJVILwWFrrTBO0nbB5vY9pjtdEpqgOEabCmExg49SYsfzj1zTAtaKGxVO2qzKphe-UC7Xn5hoYA4iHw3i85AhLjGjKW3wUIzE0MUC6AQnQG1FJqFLjRaGbV5fWMxfAk3zMAB0bfe1k3VD57eZIQPvCxQ_vqWB2UeA4cKx0cFM6jsftTfc1TUIYiZ4uv81VHmlJVYI3yLvjr9SlvCAUw9HYqhAGSxgWBtuFjBC0j7qCMU0mGhOIRRy_d2-WStH3jlPak'); background-size: cover; background-position: center;">
+<div class="absolute top-4 left-4">
+<span class="bg-primary text-on-primary font-label-caps text-label-caps px-3 py-1 rounded-full backdrop-blur-md bg-black/80">
+                                    Available
+                                </span>
+</div>
+</div>
+<div class="p-6 space-y-4 bg-surface-container-lowest">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary">Ethereal Form No. 4</h4>
+<p class="font-body-md text-body-md text-secondary mt-1">Clear Cast Resin &amp; Ash</p>
+</div>
+<div class="flex justify-between items-end border-t border-outline-variant/20 pt-4">
+<span class="font-body-md text-body-md text-primary">$1,200</span>
+<button class="font-label-caps text-label-caps text-primary hover:opacity-70 transition-opacity flex items-center gap-2">
+                                    Explore <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- System Toggle Showcase -->
+<section class="space-y-12 pb-12">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mb-2 border-b border-outline-variant/30 pb-4 inline-block">Structural Shell Patterns</h2>
+<p class="font-body-md text-body-md text-secondary mt-4">The System Switcher provides a high-level navigational pivot, distinct from standard page routing.</p>
+</div>
+<div class="p-12 bg-surface-variant/30 rounded-xl border border-outline-variant/20 flex justify-center items-center relative overflow-hidden min-h-[300px]">
+<!-- Decorative grid background for context -->
+<div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 2px 2px, black 1px, transparent 0); background-size: 24px 24px;"></div>
+<!-- The Component isolated -->
+<div class="relative z-10">
+<div class="bg-surface-container-lowest/90 backdrop-blur-md rounded-full border border-outline-variant/20 shadow-md flex items-center gap-2 p-1">
+<button class="bg-tertiary text-on-tertiary rounded-full px-6 py-2 flex items-center gap-2 transition-all duration-500 ease-in-out shadow-sm">
+<span class="material-symbols-outlined text-[18px]">storefront</span>
+<span class="font-label-caps text-label-caps">View Storefront Gallery</span>
+</button>
+<button class="text-on-surface-variant px-6 py-2 hover:bg-surface-container-high rounded-full flex items-center gap-2 transition-all duration-500 ease-in-out">
+<span class="material-symbols-outlined text-[18px]">upload_file</span>
+<span class="font-label-caps text-label-caps">Access Creator Upload Admin</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-tertiary dark:bg-tertiary-container w-full px-margin-desktop py-gutter max-w-max-width mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-center w-full">
+<div class="font-display-lg text-headline-sm text-on-tertiary mb-4 md:mb-0">
+                AuraResin
+            </div>
+<div class="flex gap-6 items-center">
+<a class="font-label-caps text-label-caps text-on-tertiary-container hover:opacity-80 transition-opacity" href="#">Exclusive Drop Alert</a>
+<a class="font-label-caps text-label-caps text-on-tertiary-container hover:opacity-80 transition-opacity" href="#">Terms</a>
+<a class="font-label-caps text-label-caps text-on-tertiary-container hover:opacity-80 transition-opacity" href="#">Privacy</a>
+</div>
+<div class="font-body-md text-body-md text-on-tertiary-container mt-4 md:mt-0 text-sm">
+                © 2024 AuraResin Studio. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>
