@@ -110,15 +110,7 @@ body { background-color: #F5F5F7; }
 <button class="filter-btn bg-surface-container text-on-surface-variant hover:bg-surface-variant font-label-caps text-[12px] px-4 py-2 rounded-full uppercase tracking-wider transition-colors" data-filter="residential" data-i18n="filter.residential">Residential</button>
 <button class="filter-btn bg-surface-container text-on-surface-variant hover:bg-surface-variant font-label-caps text-[12px] px-4 py-2 rounded-full uppercase tracking-wider transition-colors" data-filter="retail" data-i18n="filter.retail">Luxury Retail</button>
 </div>
-<div class="flex items-center space-x-4">
-<span class="font-label-caps text-[12px] text-secondary uppercase" data-i18n="filter.hue">Hues:</span>
-<div class="flex space-x-2">
-<button aria-label="Ocean Blue" class="w-6 h-6 rounded-full bg-[#006E90] border-2 border-white shadow-sm hover:scale-110 transition-transform cursor-pointer hue-btn" data-hue="blue"></button>
-<button aria-label="Emerald" class="w-6 h-6 rounded-full bg-[#00A878] border-2 border-white shadow-sm hover:scale-110 transition-transform cursor-pointer hue-btn" data-hue="green"></button>
-<button aria-label="Amber" class="w-6 h-6 rounded-full bg-[#D4AF37] border-2 border-white shadow-sm hover:scale-110 transition-transform cursor-pointer hue-btn" data-hue="amber"></button>
-<button aria-label="Smoked Grey" class="w-6 h-6 rounded-full bg-[#4A4A4A] border-2 border-white shadow-sm hover:scale-110 transition-transform cursor-pointer hue-btn" data-hue="grey"></button>
-</div>
-</div>
+
 </section>
 
 <!-- Masonry Grid -->
@@ -315,11 +307,7 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
    }
   });
 
-  // Reset hue filter
-  activeHue = null;
-  document.querySelectorAll('.hue-btn').forEach(b => b.classList.remove('ring-2', 'ring-offset-2', 'ring-primary'));
-
-  applyFilters();
+applyFilters();
  });
 });
 
@@ -327,7 +315,6 @@ function applyFilters() {
  document.querySelectorAll('.masonry-item').forEach(card => {
   let show = true;
   if (activeFilter !== 'all' && card.dataset.category !== activeFilter) show = false;
-  if (activeHue && card.dataset.colors !== activeHue) show = false;
   card.style.display = show ? '' : 'none';
  });
 }
