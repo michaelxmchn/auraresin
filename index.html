@@ -1,585 +1,432 @@
 <!DOCTYPE html>
-
-<html lang="en"><head>
+<html lang="en">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>AuraResin Studio - Artisan Gallery &amp; Admin</title>
+<title>AuraResin Studio</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "on-primary-fixed": "#1c1b1b",
-                      "surface-container-highest": "#e3e2e7",
-                      "on-secondary-container": "#616365",
-                      "on-tertiary-container": "#838484",
-                      "secondary-container": "#dfdfe1",
-                      "surface-dim": "#dad9df",
-                      "on-secondary": "#ffffff",
-                      "tertiary": "#000000",
-                      "error-container": "#ffdad6",
-                      "primary-fixed-dim": "#c8c6c5",
-                      "outline-variant": "#c4c7c7",
-                      "surface-container-high": "#e9e7ed",
-                      "surface": "#faf9fe",
-                      "surface-container-low": "#f4f3f8",
-                      "inverse-primary": "#c8c6c5",
-                      "background": "#faf9fe",
-                      "on-tertiary-fixed-variant": "#454747",
-                      "on-secondary-fixed-variant": "#454749",
-                      "error": "#ba1a1a",
-                      "primary": "#000000",
-                      "on-surface-variant": "#444748",
-                      "primary-fixed": "#e5e2e1",
-                      "inverse-surface": "#2f3034",
-                      "surface-container": "#eeedf3",
-                      "on-secondary-fixed": "#1a1c1d",
-                      "surface-bright": "#faf9fe",
-                      "on-error-container": "#93000a",
-                      "on-tertiary": "#ffffff",
-                      "on-background": "#1a1b1f",
-                      "surface-tint": "#5f5e5e",
-                      "surface-container-lowest": "#ffffff",
-                      "on-surface": "#1a1b1f",
-                      "inverse-on-surface": "#f1f0f5",
-                      "tertiary-container": "#1a1c1c",
-                      "tertiary-fixed": "#e2e2e2",
-                      "secondary": "#5d5e60",
-                      "secondary-fixed": "#e2e2e4",
-                      "outline": "#747878",
-                      "tertiary-fixed-dim": "#c6c6c7",
-                      "on-error": "#ffffff",
-                      "secondary-fixed-dim": "#c6c6c8",
-                      "primary-container": "#1c1b1b",
-                      "on-primary-fixed-variant": "#474646",
-                      "on-primary": "#ffffff",
-                      "on-tertiary-fixed": "#1a1c1c",
-                      "on-primary-container": "#858383",
-                      "surface-variant": "#e3e2e7"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.25rem",
-                      "lg": "0.5rem",
-                      "xl": "0.75rem",
-                      "full": "9999px"
-              },
-              "spacing": {
-                      "gutter": "24px",
-                      "max-width": "1440px",
-                      "unit": "8px",
-                      "margin-mobile": "20px",
-                      "margin-desktop": "64px"
-              },
-              "fontFamily": {
-                      "display-lg": [
-                              "Playfair Display"
-                      ],
-                      "body-md": [
-                              "Inter"
-                      ],
-                      "headline-sm": [
-                              "Playfair Display"
-                      ],
-                      "headline-md": [
-                              "Playfair Display"
-                      ],
-                      "label-caps": [
-                              "Inter"
-                      ],
-                      "body-lg": [
-                              "Inter"
-                      ],
-                      "button": [
-                              "Inter"
-                      ],
-                      "display-lg-mobile": [
-                              "Playfair Display"
-                      ]
-              },
-              "fontSize": {
-                      "display-lg": [
-                              "64px",
-                              {
-                                      "lineHeight": "1.1",
-                                      "letterSpacing": "-0.02em",
-                                      "fontWeight": "700"
-                              }
-                      ],
-                      "body-md": [
-                              "16px",
-                              {
-                                      "lineHeight": "1.5",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "headline-sm": [
-                              "24px",
-                              {
-                                      "lineHeight": "1.4",
-                                      "fontWeight": "500"
-                              }
-                      ],
-                      "headline-md": [
-                              "32px",
-                              {
-                                      "lineHeight": "1.3",
-                                      "fontWeight": "600"
-                              }
-                      ],
-                      "label-caps": [
-                              "12px",
-                              {
-                                      "lineHeight": "1",
-                                      "letterSpacing": "0.1em",
-                                      "fontWeight": "600"
-                              }
-                      ],
-                      "body-lg": [
-                              "18px",
-                              {
-                                      "lineHeight": "1.6",
-                                      "letterSpacing": "0.01em",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "button": [
-                              "14px",
-                              {
-                                      "lineHeight": "1",
-                                      "letterSpacing": "0.02em",
-                                      "fontWeight": "500"
-                              }
-                      ],
-                      "display-lg-mobile": [
-                              "40px",
-                              {
-                                      "lineHeight": "1.2",
-                                      "letterSpacing": "-0.01em",
-                                      "fontWeight": "700"
-                              }
-                      ]
-              }
-            }
-          }
-        }
-      </script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface": "#faf9fe",
+        "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f4f3f8",
+        "surface-container": "#eeedf3",
+        "surface-container-high": "#e9e7ed",
+        "surface-container-highest": "#e3e2e7",
+        "on-surface": "#1a1b1f",
+        "on-surface-variant": "#444748",
+        "outline": "#747878",
+        "outline-variant": "#c4c7c7",
+        "primary": "#000000",
+        "on-primary": "#ffffff",
+        "tertiary": "#000000",
+        "on-tertiary": "#ffffff"
+      },
+      borderRadius: { "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+      fontFamily: {
+        "display": ["Playfair Display"],
+        "body": ["Inter"],
+        "label-caps": ["Inter"]
+      }
+    }
+  }
+}
+</script>
 <style>
-        body {
-            background-color: #faf9fe;
-            color: #1a1b1f;
-        }
-        
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
-            position: relative;
-        }
-        
-        .glass-panel::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: inherit;
-            border-top: 1px solid rgba(255,255,255,0.8);
-            border-left: 1px solid rgba(255,255,255,0.8);
-            pointer-events: none;
-        }
-
-        .masonry-grid {
-            columns: 1;
-            column-gap: 24px;
-        }
-        @media (min-width: 768px) {
-            .masonry-grid { columns: 2; }
-        }
-        @media (min-width: 1024px) {
-            .masonry-grid { columns: 3; }
-        }
-        .masonry-item {
-            break-inside: avoid;
-            margin-bottom: 24px;
-        }
-
-        .switch-active {
-            transform: translateX(0%);
-        }
-        .switch-admin {
-            transform: translateX(100%);
-        }
-        
-        .fade-in {
-            animation: fadeIn 0.5s ease-in-out forwards;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        /* Hidden class for system toggling */
-        .system-hidden {
-            display: none !important;
-        }
-    </style>
+body { background-color: #faf9fe; color: #1a1b1f; }
+.glass-panel {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.5);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+}
+.masonry-grid { columns: 1; column-gap: 24px; }
+@media (min-width: 768px) { .masonry-grid { columns: 2; } }
+@media (min-width: 1024px) { .masonry-grid { columns: 3; } }
+.masonry-item { break-inside: avoid; margin-bottom: 24px; }
+.fade-in { animation: fadeIn 0.5s ease-in-out forwards; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.lang-btn.active { background: #000; color: #fff; }
+</style>
 </head>
 <body class="antialiased min-h-screen flex flex-col relative overflow-x-hidden">
-<!-- System Switcher (SideNavBar Adapted for Top Toggle) -->
-<nav class="bg-surface-container-lowest/80 dark:bg-surface-container-highest/80 backdrop-blur-md rounded-full m-4 fixed top-0 left-1/2 -translate-x-1/2 z-50 border border-outline-variant/20 shadow-md flex items-center gap-2 p-1 transition-all duration-500 ease-in-out">
-<div class="absolute inset-y-1 left-1 bg-tertiary rounded-full transition-transform duration-300 ease-in-out w-[calc(50%-4px)]" id="switcher-bg"></div>
-<button class="relative z-10 flex items-center gap-2 px-6 py-2 rounded-full font-label-caps text-label-caps transition-colors duration-300 text-on-tertiary" id="btn-gallery" onclick="switchSystem('gallery')">
-<span class="material-symbols-outlined text-[16px]">storefront</span>
-            View Storefront Gallery
-        </button>
-<button class="relative z-10 flex items-center gap-2 px-6 py-2 rounded-full font-label-caps text-label-caps transition-colors duration-300 text-on-surface-variant hover:bg-surface-container-high" id="btn-admin" onclick="switchSystem('admin')">
-<span class="material-symbols-outlined text-[16px]">upload_file</span>
-            Access Creator Upload Admin
-        </button>
-</nav>
-<!-- SYSTEM 1: Artisan Gallery (Public) -->
-<div class="w-full flex-grow pt-24 fade-in" id="system-gallery">
-<!-- TopNavBar -->
-<header class="bg-surface/70 dark:bg-surface-container-low/70 backdrop-blur-xl docked full-width top-0 sticky z-40 border-b border-outline-variant/30 shadow-sm dark:shadow-none flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto py-4">
-<div class="flex items-center">
-<img alt="AuraResin Logo" class="h-[60px] object-contain font-display-lg text-headline-md text-primary dark:text-on-primary-fixed" src="data:image/png;base64,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"/>
-</div>
-<nav class="hidden md:flex gap-8 items-center">
-<a class="font-label-caps text-label-caps text-primary dark:text-on-primary-fixed font-bold border-b-2 border-primary pb-1 Active: opacity-80 scale-95 transition-all" href="#">All Works</a>
-<a class="font-label-caps text-label-caps text-secondary dark:text-on-secondary-container hover:text-primary dark:hover:text-on-primary-fixed transition-colors duration-300" href="#">Indoor Elite</a>
-<a class="font-label-caps text-label-caps text-secondary dark:text-on-secondary-container hover:text-primary dark:hover:text-on-primary-fixed transition-colors duration-300" href="#">Garden &amp; Outdoor</a>
-<a class="font-label-caps text-label-caps text-secondary dark:text-on-secondary-container hover:text-primary dark:hover:text-on-primary-fixed transition-colors duration-300" href="#">Our Studio</a>
-</nav>
-<div class="flex items-center gap-4">
-<button class="text-primary hover:opacity-80 transition-opacity">
-<span class="material-symbols-outlined">search</span>
-</button>
-<button class="text-primary hover:opacity-80 transition-opacity relative">
-<span class="material-symbols-outlined">shopping_bag</span>
-<span class="absolute -top-1 -right-1 bg-tertiary text-on-tertiary text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-label-caps">2</span>
-</button>
-</div>
+
+<!-- ===== NAVBAR ===== -->
+<header class="bg-surface/70 backdrop-blur-xl fixed top-0 left-0 right-0 z-50 border-b border-outline-variant/30">
+  <div class="max-w-[1440px] mx-auto px-5 md:px-16 flex justify-between items-center h-16">
+    <!-- Logo -->
+    <div class="flex items-center">
+      <img alt="AuraResin" class="h-12 object-contain" src="data:image/png;base64,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"/>
+    </div>
+
+    <!-- Desktop Nav Links -->
+    <nav class="hidden md:flex items-center gap-8">
+      <a class="font-label-caps text-label-caps font-bold border-b-2 border-primary pb-1" href="#" data-i18n="nav.gallery">Gallery</a>
+      <a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#" data-i18n="nav.indoor">Indoor Elite</a>
+      <a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#" data-i18n="nav.outdoor">Garden & Outdoor</a>
+      <a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#" data-i18n="nav.studio">Our Studio</a>
+      <a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#" data-i18n="nav.b2b">B2B Partnership</a>
+    </nav>
+
+    <!-- Right Side: Lang + Search + Cart -->
+    <div class="flex items-center gap-3">
+      <!-- Language Switcher -->
+      <div class="flex items-center gap-1 bg-surface-container rounded-full p-1">
+        <button class="lang-btn px-3 py-1 rounded-full text-[11px] font-label-caps font-semibold tracking-wide transition-all" data-lang="en">EN</button>
+        <button class="lang-btn px-3 py-1 rounded-full text-[11px] font-label-caps font-semibold tracking-wide transition-all" data-lang="zh">中文</button>
+        <button class="lang-btn px-3 py-1 rounded-full text-[11px] font-label-caps font-semibold tracking-wide transition-all" data-lang="fr">FR</button>
+        <button class="lang-btn px-3 py-1 rounded-full text-[11px] font-label-caps font-semibold tracking-wide transition-all" data-lang="ru">RU</button>
+        <button class="lang-btn px-3 py-1 rounded-full text-[11px] font-label-caps font-semibold tracking-wide transition-all" data-lang="ar">عربي</button>
+      </div>
+
+      <button class="text-primary hover:opacity-80 transition-opacity">
+        <span class="material-symbols-outlined text-xl">search</span>
+      </button>
+      <button class="text-primary hover:opacity-80 transition-opacity relative">
+        <span class="material-symbols-outlined text-xl">shopping_bag</span>
+        <span class="absolute -top-1 -right-1 bg-tertiary text-on-tertiary text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-label-caps">2</span>
+      </button>
+      <!-- Mobile Menu -->
+      <button class="md:hidden text-primary" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <span class="material-symbols-outlined text-xl">menu</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Nav -->
+  <div id="mobile-menu" class="hidden md:hidden bg-surface border-t border-outline-variant/20 px-5 py-4 flex flex-col gap-4">
+    <a class="font-label-caps text-label-caps font-bold" href="#" data-i18n="nav.gallery">Gallery</a>
+    <a class="font-label-caps text-label-caps text-secondary" href="#" data-i18n="nav.indoor">Indoor Elite</a>
+    <a class="font-label-caps text-label-caps text-secondary" href="#" data-i18n="nav.outdoor">Garden & Outdoor</a>
+    <a class="font-label-caps text-label-caps text-secondary" href="#" data-i18n="nav.studio">Our Studio</a>
+    <a class="font-label-caps text-label-caps text-secondary" href="#" data-i18n="nav.b2b">B2B Partnership</a>
+  </div>
 </header>
-<main class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-12">
-<!-- Hero / Intro -->
-<section class="mb-16 text-center max-w-3xl mx-auto">
-<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">Curated Resin Masterpieces</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant">Explore our collection of hand-sculpted epoxy resin art, blending natural substrates with fluid acrylics to create timeless, light-refracting focal points for your space.</p>
-</section>
-<!-- Filter Bar -->
-<div class="flex flex-wrap items-center justify-between gap-4 mb-12 pb-6 border-b border-outline-variant/20">
-<div class="flex flex-wrap gap-3">
-<button class="bg-primary text-on-primary px-4 py-2 rounded-full font-button text-button">All Environments</button>
-<button class="bg-surface-container text-on-surface px-4 py-2 rounded-full font-button text-button hover:bg-surface-container-high transition-colors">Indoor</button>
-<button class="bg-surface-container text-on-surface px-4 py-2 rounded-full font-button text-button hover:bg-surface-container-high transition-colors">Outdoor Safe</button>
-</div>
-<div class="flex items-center gap-3">
-<span class="font-label-caps text-label-caps text-secondary">HUE:</span>
-<button aria-label="Blue" class="w-6 h-6 rounded-full bg-blue-500 border border-outline-variant/30 hover:scale-110 transition-transform"></button>
-<button aria-label="Green" class="w-6 h-6 rounded-full bg-emerald-600 border border-outline-variant/30 hover:scale-110 transition-transform"></button>
-<button aria-label="Amber" class="w-6 h-6 rounded-full bg-amber-700 border border-outline-variant/30 hover:scale-110 transition-transform"></button>
-<button aria-label="Clear" class="w-6 h-6 rounded-full bg-gray-200 border border-outline-variant/30 hover:scale-110 transition-transform"></button>
-</div>
-</div>
-<!-- Asymmetric Masonry Grid -->
-<div class="masonry-grid">
-<!-- Card 1 -->
-<article class="masonry-item glass-panel rounded-xl overflow-hidden group cursor-pointer hover:-translate-y-1 transition-transform duration-300">
-<div class="relative aspect-[3/4] overflow-hidden rounded-t-xl bg-surface-container">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A tall, elegant sculptural pillar made of clear epoxy resin swirling with vibrant azure blue tints, encapsulating pieces of raw olive wood. The sculpture stands on a concrete pedestal in a minimalist, light-filled gallery space with soft, architectural shadows cast on a pristine white wall. The mood is serene, high-end, and focuses on the interplay of natural light and translucent material." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAf5N0Cy4mcNRzhyYflzScBatOIs3-92J0xoOKTbf4sHV4SIiAOSZHs3QNWPKFymiUdCzLtMLf3QVzUbJRy-7fjULAZE-AO0oC4x91q8nyo9CUTybHv5UpY54sJmCclkNnEQTi2ZPB7g38Rm921wE9J1LKGIWWxMgPldBT8R9cV7CcZ92rOT_8nEedPkC8csbsL0hGkpD1G9qAMTDkKDZSXNnYjd-gHJGjS-ZH-Z-NwT8F1_oiHPKbtnV2O6qQhleqoo7PJ7jkkwJ4')">
-</div>
-<div class="absolute top-4 left-4 flex flex-col gap-2">
-<span class="bg-tertiary text-on-tertiary px-3 py-1 rounded-full font-label-caps text-label-caps uppercase tracking-wider backdrop-blur-md bg-opacity-90">Hand-Sculpted</span>
-<span class="bg-surface/80 text-primary px-3 py-1 rounded-full font-label-caps text-label-caps uppercase tracking-wider backdrop-blur-md">UV-Resistant</span>
-</div>
-</div>
-<div class="p-6">
-<h3 class="font-headline-sm text-headline-sm text-primary mb-2">The Azure Geode Pillar No. 12</h3>
-<p class="font-body-md text-body-md text-secondary mb-4">Olive Wood + Ocean Blue Tinted Resin</p>
-<div class="flex justify-between items-center">
-<span class="font-headline-md text-headline-sm text-primary">$240</span>
-<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
-<span class="material-symbols-outlined">add</span>
-</button>
-</div>
-</div>
-</article>
-<!-- Card 2 -->
-<article class="masonry-item glass-panel rounded-xl overflow-hidden group cursor-pointer hover:-translate-y-1 transition-transform duration-300">
-<div class="relative aspect-square overflow-hidden rounded-t-xl bg-surface-container">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A dynamic, curved sculpture resembling a breaking ocean wave, crafted from highly polished clear and deep emerald green tinted epoxy resin. The piece is situated on a weathered wooden deck in a lush, manicured modern garden. Sunlight catches the crest of the wave, creating brilliant refractions and highlighting the smooth, flawless surface against the natural outdoor setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBOvgRviWDnX5cpurFqYUHo1i1kYCoVxNwyEWsl3cEMT-55XjMoDEOs8tpggcs9hZhkg87WWMTNF-E-i-ozUlqAG2EOTX_-D351smGntWVqMSIzPqCHle9NQ3lsVL_3IZXfFBSyKGc-wNLAl5E3Wa0ODfcGCQa6qFQMHrHNJdjse5QWJa7aVS-KIcLuuenNxQNNmB6P-DHybyACZbKFUaQh7YVaJ4yiApYHUaxtDhzDAhTUSnXxwsyuBJcYqS7UdjUBjBLVHiJFgz8')">
-</div>
-<div class="absolute top-4 left-4 flex flex-col gap-2">
-<span class="bg-surface/80 text-primary px-3 py-1 rounded-full font-label-caps text-label-caps uppercase tracking-wider backdrop-blur-md">Outdoor Safe</span>
-<span class="bg-surface/80 text-primary px-3 py-1 rounded-full font-label-caps text-label-caps uppercase tracking-wider backdrop-blur-md">UV-Resistant</span>
-</div>
-</div>
-<div class="p-6">
-<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Emerald Tide Wave</h3>
-<p class="font-body-md text-body-md text-secondary mb-4">Clear &amp; Green Tinted Resin</p>
-<div class="flex justify-between items-center">
-<span class="font-headline-md text-headline-sm text-primary">$310</span>
-<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
-<span class="material-symbols-outlined">add</span>
-</button>
-</div>
-</div>
-</article>
-<!-- Card 3 -->
-<article class="masonry-item glass-panel rounded-xl overflow-hidden group cursor-pointer hover:-translate-y-1 transition-transform duration-300">
-<div class="relative aspect-[4/3] overflow-hidden rounded-t-xl bg-surface-container">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A low, smooth, pebble-shaped art piece merging dark obsidian-like opaque resin with translucent amber sections that reveal rough, natural stones embedded within. The object rests on a pristine, highly reflective white surface in a brightly lit studio environment, emphasizing the contrast between the glossy finish of the resin and the matte texture of the encapsulated rocks." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC1XXRffd4UIxDkz-xFyFqa6bPHkFAJtM2B5m5VYMGo5izakYsbeZjj_2KnXI9zliLSFIGl1tle_Uey2-SThtJwh7eD6oqE4zm2CpMdhVuB2zBynMdUAaqZ0vkj6t8SK-QidLGsiDJ2bhGcEWrK3eWb2yHLOhomtGdodo0xerXdJnwG9_bZeCCz7geGs6I-TtDqpwYi_QhJ0HU23zcFs2o_nPCVNT0yaxkEO9gZsACUx8VBOM2-dwyRFoi5S3HBc9pQi8MTaziNtm8')">
-</div>
-<div class="absolute top-4 left-4 flex flex-col gap-2">
-<span class="bg-surface/80 text-primary px-3 py-1 rounded-full font-label-caps text-label-caps uppercase tracking-wider backdrop-blur-md">100% Anti-Yellowing</span>
-</div>
-</div>
-<div class="p-6">
-<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Obsidian &amp; Amber Stone-Fusion</h3>
-<p class="font-body-md text-body-md text-secondary mb-4">Resin + Natural Stone</p>
-<div class="flex justify-between items-center">
-<span class="font-headline-md text-headline-sm text-primary">$195</span>
-<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
-<span class="material-symbols-outlined">add</span>
-</button>
-</div>
-</div>
-</article>
-<!-- Card 4 -->
-<article class="masonry-item glass-panel rounded-xl overflow-hidden group cursor-pointer hover:-translate-y-1 transition-transform duration-300">
-<div class="relative aspect-square overflow-hidden rounded-t-xl bg-surface-container">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A cubic sculpture of crystal-clear epoxy resin containing ethereal, smoke-like swirls of white liquid pigment suspended inside. The cube sits on a stark white geometric pedestal against a minimalist pale grey background. Soft, diffused lighting highlights the fluid, frozen-in-time nature of the internal wisps, creating a calming, modern, and slightly mysterious aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKMK6SaqjI8BskwB_m86XIdYuCLQFMBF2GoP6MYW9KyyRFwmsI2RdupYRi6gCjeqPeeOMJwkINzXzrc3HRCaANnEleTnGsU2Gg-l302YhI1Y6n30keInlaWS__YfJkvtfe10Lqf-BZmAPSs7I8kO7zZADo9q9n7G6KHtLzN8EbWgOgdsEcAFTIv690q4hhm0qHTrY69FPPWNyIuUg35grI-qxnYZE_S-ITCsKzqmwkSxDX__-fTUYNmtVAphcGEhZfsCqVDZQL5cU')">
-</div>
-<div class="absolute top-4 left-4 flex flex-col gap-2">
-<span class="bg-surface/80 text-primary px-3 py-1 rounded-full font-label-caps text-label-caps uppercase tracking-wider backdrop-blur-md">Interior Highlight</span>
-</div>
-</div>
-<div class="p-6">
-<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Smoke &amp; Mist Cube</h3>
-<p class="font-body-md text-body-md text-secondary mb-4">Liquid Resin Swirls</p>
-<div class="flex justify-between items-center">
-<span class="font-headline-md text-headline-sm text-primary">$150</span>
-<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
-<span class="material-symbols-outlined">add</span>
-</button>
-</div>
-</div>
-</article>
-</div>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main class="flex-grow pt-16 fade-in">
+
+  <!-- Hero -->
+  <section class="mb-12 text-center max-w-3xl mx-auto px-5 md:px-16 py-16">
+    <h1 class="font-display text-4xl md:text-6xl text-primary mb-6" data-i18n="hero.title">Curated Resin Masterpieces</h1>
+    <p class="font-body text-lg text-secondary" data-i18n="hero.subtitle">Explore our collection of hand-sculpted epoxy resin art, blending natural substrates with fluid acrylics to create timeless, light-refracting focal points for your space.</p>
+  </section>
+
+  <!-- Filter Bar -->
+  <div class="flex flex-wrap items-center justify-between gap-4 mb-12 pb-6 border-b border-outline-variant/20 px-5 md:px-16 max-w-[1440px] mx-auto">
+    <div class="flex flex-wrap gap-3">
+      <button class="bg-primary text-on-primary px-4 py-2 rounded-full font-label-caps text-label-caps text-[12px]" data-i18n="filter.all">All Environments</button>
+      <button class="bg-surface-container text-on-surface px-4 py-2 rounded-full font-label-caps text-label-caps text-[12px] hover:bg-surface-container-high transition-colors" data-i18n="filter.indoor">Indoor</button>
+      <button class="bg-surface-container text-on-surface px-4 py-2 rounded-full font-label-caps text-label-caps text-[12px] hover:bg-surface-container-high transition-colors" data-i18n="filter.outdoor">Outdoor Safe</button>
+    </div>
+    <div class="flex items-center gap-3">
+      <span class="font-label-caps text-label-caps text-[12px] text-secondary" data-i18n="filter.hue">HUE:</span>
+      <button aria-label="Blue" class="w-6 h-6 rounded-full bg-blue-500 border border-outline-variant/30 hover:scale-110 transition-transform cursor-pointer"></button>
+      <button aria-label="Green" class="w-6 h-6 rounded-full bg-emerald-600 border border-outline-variant/30 hover:scale-110 transition-transform cursor-pointer"></button>
+      <button aria-label="Amber" class="w-6 h-6 rounded-full bg-amber-700 border border-outline-variant/30 hover:scale-110 transition-transform cursor-pointer"></button>
+      <button aria-label="Clear" class="w-6 h-6 rounded-full bg-gray-200 border border-outline-variant/30 hover:scale-110 transition-transform cursor-pointer"></button>
+    </div>
+  </div>
+
+  <!-- Masonry Grid -->
+  <div class="masonry-grid px-5 md:px-16 max-w-[1440px] mx-auto">
+    <!-- Card 1 -->
+    <article class="masonry-item glass-panel rounded-xl overflow-hidden group cursor-pointer hover:-translate-y-1 transition-transform duration-300">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-t-xl bg-surface-container">
+        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAf5N0Cy4mcNRzhyYflzScBatOIs3-92J0xoOKTbf4sHV4SIiAOSZHs3QNWPKFymiUdCzLtMLf3QVzUbJRy-7fjULAZE-AO0oC4x91q8nyo9CUTybHv5UpY54sJmCclkNnEQTi2ZPB7g38Rm921wE9J1LKGIWWxMgPldBT8R9cV7CcZ92rOT_8nEedPkC8csbsL0hGkpD1G9qAMTDkKDZSXNnYjd-gHJGjS-ZH-Z-NwT8F1_oiHPKbtnV2O6qQhleqoo7PJ7jkkwJ4')"></div>
+        <div class="absolute top-4 left-4 flex flex-col gap-2">
+          <span class="bg-tertiary text-on-tertiary px-3 py-1 rounded-full font-label-caps text-[10px] uppercase tracking-wider backdrop-blur-md" data-i18n="badge.hand">Hand-Sculpted</span>
+          <span class="bg-surface/80 text-primary px-3 py-1 rounded-full font-label-caps text-[10px] uppercase tracking-wider backdrop-blur-md">UV-Resistant</span>
+        </div>
+      </div>
+      <div class="p-6">
+        <h3 class="font-display text-xl text-primary mb-2" data-i18n="p1.title">The Azure Geode Pillar No. 12</h3>
+        <p class="font-body text-sm text-secondary mb-4" data-i18n="p1.subtitle">Olive Wood + Ocean Blue Tinted Resin</p>
+        <div class="flex justify-between items-center">
+          <span class="font-display text-lg text-primary">$240</span>
+          <button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+            <span class="material-symbols-outlined text-xl">add</span>
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="masonry-item glass-panel rounded-xl overflow-hidden group cursor-pointer hover:-translate-y-1 transition-transform duration-300">
+      <div class="relative aspect-square overflow-hidden rounded-t-xl bg-surface-container">
+        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBOvgRviWDnX5cpurFqYUHo1i1kYCoVxNwyEWsl3cEMT-55XjMoDEOs8tpggcs9hZhkg87WWMTNF-E-i-ozUlqAG2EOTX_-D351smGntWVqMSIzPqCHle9NQ3lsVL_3IZXfFBSyKGc-wNLAl5E3Wa0ODfcGCQa6qFQMHrHNJdjse5QWJa7aVS-KIcLuuenNxQNNmB6P-DHybyACZbKFUaQh7YVaJ4yiApYHUaxtDhzDAhTUSnXxwsyuBJcYqS7UdjUBjBLVHiJFgz8')"></div>
+        <div class="absolute top-4 left-4 flex flex-col gap-2">
+          <span class="bg-surface/80 text-primary px-3 py-1 rounded-full font-label-caps text-[10px] uppercase tracking-wider backdrop-blur-md" data-i18n="badge.outdoor">Outdoor Safe</span>
+          <span class="bg-surface/80 text-primary px-3 py-1 rounded-full font-label-caps text-[10px] uppercase tracking-wider backdrop-blur-md">UV-Resistant</span>
+        </div>
+      </div>
+      <div class="p-6">
+        <h3 class="font-display text-xl text-primary mb-2" data-i18n="p2.title">Emerald Tide Wave</h3>
+        <p class="font-body text-sm text-secondary mb-4" data-i18n="p2.subtitle">Clear & Green Tinted Resin</p>
+        <div class="flex justify-between items-center">
+          <span class="font-display text-lg text-primary">$310</span>
+          <button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+            <span class="material-symbols-outlined text-xl">add</span>
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="masonry-item glass-panel rounded-xl overflow-hidden group cursor-pointer hover:-translate-y-1 transition-transform duration-300">
+      <div class="relative aspect-[4/3] overflow-hidden rounded-t-xl bg-surface-container">
+        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC1XXRffd4UIxDkz-xFyFqa6bPHkFAJtM2B5m5VYMGo5izakYsbeZjj_2KnXI9zliLSFIGl1tle_Uey2-SThtJwh7eD6oqE4zm2CpMdhVuB2zBynMdUAaqZ0vkj6t8SK-QidLGsiDJ2bhGcEWrK3eWb2yHLOhomtGdodo0xerXdJnwG9_bZeCCz7geGs6I-TtDqpwYi_QhJ0HU23zcFs2o_nPCVNT0yaxkEO9gZsACUx8VBOM2-dwyRFoi5S3HBc9pQi8MTaziNtm8')"></div>
+        <div class="absolute top-4 left-4 flex flex-col gap-2">
+          <span class="bg-surface/80 text-primary px-3 py-1 rounded-full font-label-caps text-[10px] uppercase tracking-wider backdrop-blur-md">100% Anti-Yellowing</span>
+        </div>
+      </div>
+      <div class="p-6">
+        <h3 class="font-display text-xl text-primary mb-2" data-i18n="p3.title">Obsidian & Amber Stone-Fusion</h3>
+        <p class="font-body text-sm text-secondary mb-4" data-i18n="p3.subtitle">Resin + Natural Stone</p>
+        <div class="flex justify-between items-center">
+          <span class="font-display text-lg text-primary">$195</span>
+          <button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+            <span class="material-symbols-outlined text-xl">add</span>
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 4 -->
+    <article class="masonry-item glass-panel rounded-xl overflow-hidden group cursor-pointer hover:-translate-y-1 transition-transform duration-300">
+      <div class="relative aspect-square overflow-hidden rounded-t-xl bg-surface-container">
+        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKMK6SaqjI8BskwB_m86XIdYuCLQFMBF2GoP6MYW9KyyRFwmsI2RdupYRi6gCjeqPeeOMJwkINzXzrc3HRCaANnEleTnGsU2Gg-l302YhI1Y6n30keInlaWS__YfJkvtfe10Lqf-BZmAPSs7I8kO7zZADo9q9n7G6KHtLzN8EbWgOgdsEcAFTIv690q4hhm0qHTrY69FPPWNyIuUg35grI-qxnYZE_S-ITCsKzqmwkSxDX__-fTUYNmtVAphcGEhZfsCqVDZQL5cU')"></div>
+        <div class="absolute top-4 left-4 flex flex-col gap-2">
+          <span class="bg-surface/80 text-primary px-3 py-1 rounded-full font-label-caps text-[10px] uppercase tracking-wider backdrop-blur-md">Interior Highlight</span>
+        </div>
+      </div>
+      <div class="p-6">
+        <h3 class="font-display text-xl text-primary mb-2" data-i18n="p4.title">Smoke & Mist Cube</h3>
+        <p class="font-body text-sm text-secondary mb-4" data-i18n="p4.subtitle">Liquid Resin Swirls</p>
+        <div class="flex justify-between items-center">
+          <span class="font-display text-lg text-primary">$150</span>
+          <button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+            <span class="material-symbols-outlined text-xl">add</span>
+          </button>
+        </div>
+      </div>
+    </article>
+  </div>
 </main>
-<!-- Footer -->
-<footer class="bg-tertiary dark:bg-tertiary-container mt-20">
-<div class="w-full px-margin-mobile md:px-margin-desktop py-12 max-w-max-width mx-auto flex flex-col items-center text-center">
-<h4 class="font-display-lg-mobile md:font-headline-md text-headline-md text-on-tertiary mb-4">Exclusive Drop Alert</h4>
-<p class="font-body-md text-body-md text-on-tertiary-container max-w-md mx-auto mb-8">Next 10 Hand-Sculpted Drops releasing this Saturday. Be the first to acquire our latest studio pieces.</p>
-<div class="flex w-full max-w-md gap-2 mb-16">
-<input class="flex-grow bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-on-tertiary placeholder-white/50 focus:outline-none focus:border-white/50 focus:ring-1 focus:ring-white/50 font-body-md" placeholder="Email Address" type="email"/>
-<button class="bg-on-tertiary text-tertiary px-6 py-3 rounded-lg font-button text-button hover:bg-white/90 transition-colors">Notify Me</button>
-</div>
-<div class="w-full border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-<span class="font-display-lg text-headline-sm text-on-tertiary">AuraResin Studio</span>
-<div class="flex gap-6">
-<a class="font-label-caps text-label-caps text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">Terms</a>
-<a class="font-label-caps text-label-caps text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">Privacy</a>
-</div>
-<span class="font-body-md text-body-md text-on-tertiary-container text-sm">© 2024 AuraResin Studio. All rights reserved.</span>
-</div>
-</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-tertiary mt-20">
+  <div class="px-5 md:px-16 py-12 max-w-[1440px] mx-auto flex flex-col items-center text-center">
+    <h4 class="font-display text-2xl text-on-tertiary mb-4" data-i18n="footer.alert">Exclusive Drop Alert</h4>
+    <p class="font-body text-sm text-on-tertiary-container max-w-md mx-auto mb-8" data-i18n="footer.alerttext">Next 10 Hand-Sculpted Drops releasing this Saturday. Be the first to acquire our latest studio pieces.</p>
+    <div class="flex w-full max-w-md gap-2 mb-16">
+      <input class="flex-grow bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-on-tertiary placeholder-white/50 focus:outline-none focus:border-white/50 font-body text-sm" placeholder="Email Address" type="email"/>
+      <button class="bg-on-tertiary text-tertiary px-6 py-3 rounded-lg font-label-caps text-[12px] hover:bg-white/90 transition-colors" data-i18n="footer.notify">Notify Me</button>
+    </div>
+    <div class="w-full border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <span class="font-display text-xl text-on-tertiary">AuraResin Studio</span>
+      <div class="flex gap-6">
+        <a class="font-label-caps text-[12px] text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#" data-i18n="footer.terms">Terms</a>
+        <a class="font-label-caps text-[12px] text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#" data-i18n="footer.privacy">Privacy</a>
+      </div>
+      <span class="font-body text-sm text-on-tertiary-container">© 2024 AuraResin Studio. All rights reserved.</span>
+    </div>
+  </div>
 </footer>
-</div>
-<!-- SYSTEM 2: Creator Upload Dashboard (Admin) -->
-<div class="system-hidden w-full h-screen pt-24 fade-in bg-surface-container-low" id="system-admin">
-<div class="max-w-max-width mx-auto h-full px-margin-mobile md:px-margin-desktop pb-8 flex flex-col lg:flex-row gap-8">
-<!-- Left: Upload Form -->
-<div class="w-full lg:w-1/2 h-full flex flex-col bg-surface rounded-2xl border border-outline-variant/20 shadow-sm overflow-hidden">
-<div class="p-6 border-b border-outline-variant/20 bg-surface-container-lowest">
-<h2 class="font-headline-md text-headline-md text-primary">Creator Upload Form</h2>
-<p class="font-body-md text-body-md text-secondary mt-1">Publish a new piece to the storefront gallery.</p>
-</div>
-<div class="p-6 overflow-y-auto flex-grow space-y-6">
-<!-- Image Upload Area -->
-<div class="w-full h-48 border-2 border-dashed border-outline-variant/50 rounded-xl flex flex-col items-center justify-center bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer group">
-<span class="material-symbols-outlined text-4xl text-outline mb-2 group-hover:text-primary transition-colors">add_photo_alternate</span>
-<span class="font-button text-button text-secondary group-hover:text-primary transition-colors">Click to Upload Product Image</span>
-<span class="font-label-caps text-label-caps text-outline mt-2">HIGH-RES JPG OR PNG</span>
-</div>
-<!-- Form Fields -->
-<div class="space-y-4">
-<div>
-<label class="block font-label-caps text-label-caps text-primary mb-2">Piece Name</label>
-<input class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-lg px-4 py-3 text-primary font-body-md focus:border-primary focus:ring-1 focus:ring-primary transition-all" id="admin-title" oninput="updatePreview()" type="text" value="New Masterpiece"/>
-</div>
-<div class="grid grid-cols-2 gap-4">
-<div>
-<label class="block font-label-caps text-label-caps text-primary mb-2">Category</label>
-<select class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-lg px-4 py-3 text-primary font-body-md focus:border-primary focus:ring-1 focus:ring-primary transition-all" id="admin-category" onchange="updatePreview()">
-<option value="Indoor">Indoor</option>
-<option value="Outdoor Safe">Outdoor Safe</option>
-</select>
-</div>
-<div>
-<label class="block font-label-caps text-label-caps text-primary mb-2">Price ($)</label>
-<input class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-lg px-4 py-3 text-primary font-body-md focus:border-primary focus:ring-1 focus:ring-primary transition-all" id="admin-price" oninput="updatePreview()" type="number" value="0"/>
-</div>
-</div>
-<div>
-<label class="block font-label-caps text-label-caps text-primary mb-2">Substrate &amp; Details</label>
-<input class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-lg px-4 py-3 text-primary font-body-md focus:border-primary focus:ring-1 focus:ring-primary transition-all" id="admin-subtitle" oninput="updatePreview()" type="text" value="Resin + Material"/>
-</div>
-<div>
-<label class="block font-label-caps text-label-caps text-primary mb-3">Attributes (Auto-generates Badges)</label>
-<div class="flex flex-wrap gap-4">
-<label class="flex items-center gap-2 cursor-pointer">
-<input class="rounded text-tertiary focus:ring-tertiary w-5 h-5 border-outline-variant/50" id="check-uv" onchange="updatePreview()" type="checkbox"/>
-<span class="font-body-md text-body-md text-secondary">UV Stabilizer</span>
-</label>
-<label class="flex items-center gap-2 cursor-pointer">
-<input checked="" class="rounded text-tertiary focus:ring-tertiary w-5 h-5 border-outline-variant/50" id="check-hand" onchange="updatePreview()" type="checkbox"/>
-<span class="font-body-md text-body-md text-secondary">Hand-Sculpted</span>
-</label>
-<label class="flex items-center gap-2 cursor-pointer">
-<input class="rounded text-tertiary focus:ring-tertiary w-5 h-5 border-outline-variant/50" id="check-led" onchange="updatePreview()" type="checkbox"/>
-<span class="font-body-md text-body-md text-secondary">LED Base Included</span>
-</label>
-</div>
-</div>
-</div>
-</div>
-<div class="p-6 border-t border-outline-variant/20 bg-surface-container-lowest flex justify-end gap-4 mt-auto">
-<button class="px-6 py-2 rounded-lg font-button text-button text-secondary hover:bg-surface-container transition-colors">Save Draft</button>
-<button class="px-6 py-2 rounded-lg font-button text-button bg-tertiary text-on-tertiary hover:opacity-90 transition-opacity shadow-sm">Publish to Gallery</button>
-</div>
-</div>
-<!-- Right: Live Preview -->
-<div class="w-full lg:w-1/2 h-full flex flex-col items-center justify-center bg-surface-container-highest/30 rounded-2xl border border-outline-variant/20 p-8 relative">
-<div class="absolute top-6 left-6 flex items-center gap-2">
-<span class="material-symbols-outlined text-secondary text-[18px]">visibility</span>
-<span class="font-label-caps text-label-caps text-secondary tracking-widest">LIVE PREVIEW</span>
-</div>
-<!-- Preview Card -->
-<div class="w-full max-w-[360px]">
-<article class="glass-panel rounded-xl overflow-hidden shadow-lg bg-surface-container-lowest">
-<div class="relative aspect-[4/5] overflow-hidden rounded-t-xl bg-surface-container flex items-center justify-center border-b border-outline-variant/10">
-<!-- Placeholder Image for preview -->
-<div class="absolute inset-0 bg-gradient-to-br from-surface-variant to-surface-container-highest opacity-50"></div>
-<span class="material-symbols-outlined text-outline text-6xl relative z-10">image</span>
-<div class="absolute top-4 left-4 flex flex-col gap-2 z-20" id="preview-badges">
-<!-- Badges generated by JS -->
-<span class="bg-surface/90 text-primary px-3 py-1 rounded-full font-label-caps text-label-caps uppercase tracking-wider backdrop-blur-md shadow-sm border border-white/50" id="badge-category">Indoor</span>
-<span class="bg-tertiary text-on-tertiary px-3 py-1 rounded-full font-label-caps text-label-caps uppercase tracking-wider shadow-sm" id="badge-hand">Hand-Sculpted</span>
-</div>
-</div>
-<div class="p-6">
-<h3 class="font-headline-sm text-headline-sm text-primary mb-2 truncate" id="preview-title">New Masterpiece</h3>
-<p class="font-body-md text-body-md text-secondary mb-4 truncate" id="preview-subtitle">Resin + Material</p>
-<div class="flex justify-between items-center border-t border-outline-variant/20 pt-4 mt-2">
-<span class="font-headline-md text-headline-sm text-primary" id="preview-price">$0</span>
-<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary cursor-default">
-<span class="material-symbols-outlined">add</span>
-</button>
-</div>
-</div>
-</article>
-</div>
-</div>
-</div>
-</div>
+
+<!-- ===== LANGUAGE SCRIPT ===== -->
 <script>
-        // System Switcher Logic
-        function switchSystem(system) {
-            const btnGallery = document.getElementById('btn-gallery');
-            const btnAdmin = document.getElementById('btn-admin');
-            const bgToggle = document.getElementById('switcher-bg');
-            const sysGallery = document.getElementById('system-gallery');
-            const sysAdmin = document.getElementById('system-admin');
+const i18n = {
+  en: {
+    "nav.gallery": "Gallery",
+    "nav.indoor": "Indoor Elite",
+    "nav.outdoor": "Garden & Outdoor",
+    "nav.studio": "Our Studio",
+    "nav.b2b": "B2B Partnership",
+    "hero.title": "Curated Resin Masterpieces",
+    "hero.subtitle": "Explore our collection of hand-sculpted epoxy resin art, blending natural substrates with fluid acrylics to create timeless, light-refracting focal points for your space.",
+    "filter.all": "All Environments",
+    "filter.indoor": "Indoor",
+    "filter.outdoor": "Outdoor Safe",
+    "filter.hue": "HUE:",
+    "p1.title": "The Azure Geode Pillar No. 12",
+    "p1.subtitle": "Olive Wood + Ocean Blue Tinted Resin",
+    "p2.title": "Emerald Tide Wave",
+    "p2.subtitle": "Clear & Green Tinted Resin",
+    "p3.title": "Obsidian & Amber Stone-Fusion",
+    "p3.subtitle": "Resin + Natural Stone",
+    "p4.title": "Smoke & Mist Cube",
+    "p4.subtitle": "Liquid Resin Swirls",
+    "badge.hand": "Hand-Sculpted",
+    "badge.outdoor": "Outdoor Safe",
+    "footer.alert": "Exclusive Drop Alert",
+    "footer.alerttext": "Next 10 Hand-Sculpted Drops releasing this Saturday. Be the first to acquire our latest studio pieces.",
+    "footer.notify": "Notify Me",
+    "footer.terms": "Terms",
+    "footer.privacy": "Privacy"
+  },
+  zh: {
+    "nav.gallery": "艺术馆",
+    "nav.indoor": "室内精选",
+    "nav.outdoor": "花园户外",
+    "nav.studio": "我们的工作室",
+    "nav.b2b": "B2B 合作",
+    "hero.title": "精选环氧树脂杰作",
+    "hero.subtitle": "探索我们的手工雕塑环氧树脂艺术系列，融合天然基材与流体压克力，打造永恒的折射焦点。",
+    "filter.all": "所有环境",
+    "filter.indoor": "室内",
+    "filter.outdoor": "户外安全",
+    "filter.hue": "色调：",
+    "p1.title": "蓝色晶洞柱 No. 12",
+    "p1.subtitle": "橄榄木 + 海洋蓝调树脂",
+    "p2.title": "翡翠潮汐波浪",
+    "p2.subtitle": "透明 + 绿色调树脂",
+    "p3.title": "黑曜石与琥珀石融合",
+    "p3.subtitle": "树脂 + 天然石材",
+    "p4.title": "烟雾与迷雾立方体",
+    "p4.subtitle": "液态树脂漩涡",
+    "badge.hand": "手工雕塑",
+    "badge.outdoor": "户外安全",
+    "footer.alert": "独家限量发售提醒",
+    "footer.alerttext": "本周六将有10件手工雕塑新品首发。抢先获取我们的最新作品。",
+    "footer.notify": "通知我",
+    "footer.terms": "条款",
+    "footer.privacy": "隐私"
+  },
+  fr: {
+    "nav.gallery": "Galerie",
+    "nav.indoor": "Intérieurs d'Élite",
+    "nav.outdoor": "Jardin & Extérieur",
+    "nav.studio": "Notre Studio",
+    "nav.b2b": "Partenariat B2B",
+    "hero.title": "Chefs-d'œuvre en Résine",
+    "hero.subtitle": "Explorez notre collection d'art en résine époxy sculptée à la main, alliant substrats naturels et acryliques fluides pour créer des points focaux intemporels à votre espace.",
+    "filter.all": "Tous les Environnements",
+    "filter.indoor": "Intérieur",
+    "filter.outdoor": "Extérieur Sûr",
+    "filter.hue": "TEINTE:",
+    "p1.title": "Le Pilier de Géode Azur No. 12",
+    "p1.subtitle": "Bois d'Olivier + Résine Bleue Océan",
+    "p2.title": "Vague Émeraude",
+    "p2.subtitle": "Résine Claire & Verte",
+    "p3.title": "Obsidienne & Pierre d'Ambre",
+    "p3.subtitle": "Résine + Pierre Naturelle",
+    "p4.title": "Cube de Fumée & Brume",
+    "p4.subtitle": "Tourbillons de Résine Liquide",
+    "badge.hand": "Sculpté à la Main",
+    "badge.outdoor": "Extérieur Sûr",
+    "footer.alert": "Alerte Drop Exclusif",
+    "footer.alerttext": "10 nouveaux morceaux sculptés à la main ce samedi. Soyez le premier à acquérir nos dernières pièces.",
+    "footer.notify": "Me Notifier",
+    "footer.terms": "Conditions",
+    "footer.privacy": "Confidentialité"
+  },
+  ru: {
+    "nav.gallery": "Галерея",
+    "nav.indoor": "Элитные Интерьеры",
+    "nav.outdoor": "Сад и Уличные",
+    "nav.studio": "Наша Студия",
+    "nav.b2b": "B2B Партнёрство",
+    "hero.title": "Тщательно Отобранные Шедевры из Смолы",
+    "hero.subtitle": "Исследуйте нашу коллекцию художественных изделий из эпоксидной смолы, сочетающих натуральные основы с жидкими акрилами для создания вечных светопреломляющих акцентов.",
+    "filter.all": "Все Среды",
+    "filter.indoor": "Интерьер",
+    "filter.outdoor": "Безопасно для улицы",
+    "filter.hue": "ОТТЕНОК:",
+    "p1.title": "Лазурная Геодная Колонна No. 12",
+    "p1.subtitle": "Оливковое Дерево + Голубая Смола",
+    "p2.title": "Изумрудная Приливная Волна",
+    "p2.subtitle": "Прозрачная и Зелёная Смола",
+    "p3.title": "Обсидиан и Янтарный Камень",
+    "p3.subtitle": "Смола + Натуральный Камень",
+    "p4.title": "Куб Дыма и Тумана",
+    "p4.subtitle": "Жидкие Смоляные Вихри",
+    "badge.hand": "Ручная Лепка",
+    "badge.outdoor": "Безопасно для улицы",
+    "footer.alert": "Эксклюзивное Уведомление о Дропе",
+    "footer.alerttext": "10 новых ручных работ выходит в эту субботу. Будьте первым.",
+    "footer.notify": "Уведомить Меня",
+    "footer.terms": "Условия",
+    "footer.privacy": "Конфиденциальность"
+  },
+  ar: {
+    "nav.gallery": "المعرض",
+    "nav.indoor": " élite d'intérieur",
+    "nav.outdoor": "حديقة وخارج",
+    "nav.studio": "استوديو لدينا",
+    "nav.b2b": "شراكة B2B",
+    "hero.title": "روائع الراتنج المختارة",
+    "hero.subtitle": "استكشف مجموعتنا من فن الراتنج الايبوكسي المنحوت يدويًا، ممزوجًا بالركائز الطبيعية مع الأكريليك السائل لخلق نقاط محورية دائمة.",
+    "filter.all": "جميع البيئات",
+    "filter.indoor": "داخلي",
+    "filter.outdoor": "خارجي آمن",
+    "filter.hue": "اللون:",
+    "p1.title": "عمود الزبرجد الأزرق No. 12",
+    "p1.subtitle": "خشب زيتوني + راتنج أزرق محيطي",
+    "p2.title": "موجة الزمرد المدية",
+    "p2.subtitle": "راتنج صافٍ وأخضر",
+    "p3.title": "حجر السج والأحجار الكهرمان",
+    "p3.subtitle": "راتنج + حجر طبيعي",
+    "p4.title": "مكعب الدخان والضباب",
+    "p4.subtitle": "دوامة راتنج سائل",
+    "badge.hand": "منحوت يدوياً",
+    "badge.outdoor": "خارجي آمن",
+    "footer.alert": "تنبيه منتج حصري",
+    "footer.alerttext": "10 القطع المنحوتة يدوياً الجديدة ستصدر هذا السبت.",
+    "footer.notify": "أعلمني",
+    "footer.terms": "الشروط",
+    "footer.privacy": "الخصوصية"
+  }
+};
 
-            if (system === 'gallery') {
-                // Update Buttons
-                btnGallery.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-high');
-                btnGallery.classList.add('text-on-tertiary');
-                
-                btnAdmin.classList.remove('text-on-tertiary');
-                btnAdmin.classList.add('text-on-surface-variant', 'hover:bg-surface-container-high');
-                
-                // Move Toggle Pill
-                bgToggle.style.transform = 'translateX(0%)';
-                
-                // Switch Content
-                sysAdmin.classList.add('system-hidden');
-                sysGallery.classList.remove('system-hidden');
-            } else {
-                // Update Buttons
-                btnAdmin.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-high');
-                btnAdmin.classList.add('text-on-tertiary');
-                
-                btnGallery.classList.remove('text-on-tertiary');
-                btnGallery.classList.add('text-on-surface-variant', 'hover:bg-surface-container-high');
-                
-                // Move Toggle Pill (100% of its own width + gap compensation)
-                bgToggle.style.transform = 'translateX(calc(100% + 4px))';
-                
-                // Switch Content
-                sysGallery.classList.add('system-hidden');
-                sysAdmin.classList.remove('system-hidden');
-            }
-        }
+// Init language
+let currentLang = localStorage.getItem('auraresin-lang') || 'en';
 
-        // Live Preview Logic for Admin Form
-        function updatePreview() {
-            const title = document.getElementById('admin-title').value || 'Untitled Piece';
-            const subtitle = document.getElementById('admin-subtitle').value || 'Unknown Material';
-            const price = document.getElementById('admin-price').value || '0';
-            const category = document.getElementById('admin-category').value;
-            
-            const hasUV = document.getElementById('check-uv').checked;
-            const hasHand = document.getElementById('check-hand').checked;
-            const hasLED = document.getElementById('check-led').checked;
+function setLanguage(lang) {
+  currentLang = lang;
+  localStorage.setItem('auraresin-lang', lang);
+  
+  // Update all i18n elements
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (i18n[lang] && i18n[lang][key]) {
+      el.textContent = i18n[lang][key];
+    }
+  });
+  
+  // Update active button
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    if (btn.dataset.lang === lang) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
+  
+  // Update RTL for Arabic
+  if (lang === 'ar') {
+    document.documentElement.dir = 'rtl';
+    document.documentElement.lang = 'ar';
+  } else {
+    document.documentElement.dir = 'ltr';
+    document.documentElement.lang = lang;
+  }
+}
 
-            // Update Text
-            document.getElementById('preview-title').textContent = title;
-            document.getElementById('preview-subtitle').textContent = subtitle;
-            document.getElementById('preview-price').textContent = `$${price}`;
+// Language button click handlers
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+});
 
-            // Update Badges Container
-            const badgesContainer = document.getElementById('preview-badges');
-            badgesContainer.innerHTML = ''; // Clear existing
-
-            // Add Category Badge
-            const catBadge = document.createElement('span');
-            catBadge.className = 'bg-surface/90 text-primary px-3 py-1 rounded-full font-label-caps text-label-caps uppercase tracking-wider backdrop-blur-md shadow-sm border border-white/50';
-            catBadge.textContent = category;
-            badgesContainer.appendChild(catBadge);
-
-            // Add Attributes
-            if (hasHand) {
-                const badge = document.createElement('span');
-                badge.className = 'bg-tertiary text-on-tertiary px-3 py-1 rounded-full font-label-caps text-label-caps uppercase tracking-wider shadow-sm';
-                badge.textContent = 'Hand-Sculpted';
-                badgesContainer.appendChild(badge);
-            }
-            if (hasUV) {
-                const badge = document.createElement('span');
-                badge.className = 'bg-surface/90 text-primary px-3 py-1 rounded-full font-label-caps text-label-caps uppercase tracking-wider backdrop-blur-md shadow-sm border border-white/50';
-                badge.textContent = 'UV-Resistant';
-                badgesContainer.appendChild(badge);
-            }
-            if (hasLED) {
-                const badge = document.createElement('span');
-                badge.className = 'bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full font-label-caps text-label-caps uppercase tracking-wider shadow-sm';
-                badge.textContent = 'LED Ready';
-                badgesContainer.appendChild(badge);
-            }
-        }
-
-        // Initialize preview on load
-        document.addEventListener('DOMContentLoaded', updatePreview);
-    </script>
-</body></html>
+// Set initial language
+setLanguage(currentLang);
+</script>
+</body>
+</html>
