@@ -1,252 +1,118 @@
 <!DOCTYPE html>
-
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Our Studio - AuraResin Studio</title>
+<title>Our Studio | AuraResin Studio</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "on-secondary-fixed-variant": "#454749",
-                        "primary": "#000000",
-                        "error": "#ba1a1a",
-                        "primary-fixed": "#e5e2e1",
-                        "on-surface-variant": "#444748",
-                        "surface-container-low": "#f4f3f8",
-                        "surface": "#faf9fe",
-                        "inverse-primary": "#c8c6c5",
-                        "on-tertiary-fixed-variant": "#454747",
-                        "background": "#faf9fe",
-                        "surface-dim": "#dad9df",
-                        "tertiary": "#000000",
-                        "on-secondary": "#ffffff",
-                        "surface-container-high": "#e9e7ed",
-                        "outline-variant": "#c4c7c7",
-                        "primary-fixed-dim": "#c8c6c5",
-                        "error-container": "#ffdad6",
-                        "surface-container-highest": "#e3e2e7",
-                        "on-primary-fixed": "#1c1b1b",
-                        "on-tertiary-container": "#838484",
-                        "on-secondary-container": "#616365",
-                        "secondary-container": "#dfdfe1",
-                        "on-primary-fixed-variant": "#474646",
-                        "primary-container": "#1c1b1b",
-                        "on-tertiary-fixed": "#1a1c1c",
-                        "on-primary": "#ffffff",
-                        "surface-variant": "#e3e2e7",
-                        "on-primary-container": "#858383",
-                        "outline": "#747878",
-                        "secondary-fixed": "#e2e2e4",
-                        "secondary": "#5d5e60",
-                        "on-error": "#ffffff",
-                        "tertiary-fixed-dim": "#c6c6c7",
-                        "secondary-fixed-dim": "#c6c6c8",
-                        "surface-tint": "#5f5e5e",
-                        "on-tertiary": "#ffffff",
-                        "on-background": "#1a1b1f",
-                        "on-surface": "#1a1b1f",
-                        "inverse-on-surface": "#f1f0f5",
-                        "surface-container-lowest": "#ffffff",
-                        "tertiary-fixed": "#e2e2e2",
-                        "tertiary-container": "#1a1c1c",
-                        "inverse-surface": "#2f3034",
-                        "surface-bright": "#faf9fe",
-                        "on-error-container": "#93000a",
-                        "surface-container": "#eeedf3",
-                        "on-secondary-fixed": "#1a1c1d"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "gutter": "24px",
-                        "max-width": "1440px",
-                        "unit": "8px",
-                        "margin-mobile": "20px",
-                        "margin-desktop": "64px"
-                    },
-                    "fontFamily": {
-                        "headline-md": ["Playfair Display"],
-                        "headline-sm": ["Playfair Display"],
-                        "display-lg": ["Playfair Display"],
-                        "body-md": ["Inter"],
-                        "display-lg-mobile": ["Playfair Display"],
-                        "button": ["Inter"],
-                        "body-lg": ["Inter"],
-                        "label-caps": ["Inter"]
-                    },
-                    "fontSize": {
-                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
-                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
-                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
-                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
-                        "button": ["14px", { "lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "500" }],
-                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400" }],
-                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }]
-                    }
-                },
-            },
-        }
-    </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface":"#faf9fe","surface-container-lowest":"#ffffff","surface-container-low":"#f4f3f8","surface-container":"#eeedf3","surface-container-high":"#e9e7ed","primary":"#000000","on-primary":"#ffffff","secondary":"#5d5e60","on-surface":"#1a1b1f","on-surface-variant":"#444748","outline":"#747878","outline-variant":"#c4c7c7","tertiary":"#000000","on-tertiary":"#ffffff"},borderRadius:{"lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"unit":"8px","margin-mobile":"20px","max-width":"1440px","margin-desktop":"64px"},fontFamily:{display:["Playfair Display"],body:["Inter"],"label-caps":["Inter"]}}}};
+</script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-        }
-        .material-symbols-outlined.filled {
-            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-        }
-        
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid #EEEEEE;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
-            border-top: 1px solid rgba(255, 255, 255, 0.8);
-            border-left: 1px solid rgba(255, 255, 255, 0.8);
-        }
-    </style>
+body{background-color:#F5F5F7}.glass-card{background:rgba(255,255,255,0.7);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.5);box-shadow:inset 1px 1px 0 0 rgba(255,255,255,0.8),0 10px 40px rgba(0,0,0,0.04)}
+.pure-card{background-color:#FFFFFF;border:1px solid #EEEEEE}
+.fade-in{animation:fadeIn .5s ease-in-out forwards}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.lang-btn.active{background:#000;color:#fff}
+</style>
 </head>
-<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md selection:bg-surface-dim selection:text-primary">
-<!-- TopNavBar -->
-<header class="bg-surface/70 dark:bg-surface-container-low/70 backdrop-blur-xl w-full top-0 sticky z-40 border-b border-outline-variant/30 shadow-sm dark:shadow-none">
-<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto py-4">
-<!-- Brand -->
-<a class="font-display-lg text-headline-md text-primary dark:text-on-primary-fixed" href="#">AuraResin</a>
-<!-- Navigation Links (Desktop) -->
-<nav class="hidden md:flex gap-8 items-center">
-<a class="text-secondary dark:text-on-secondary-container hover:text-primary dark:hover:text-on-primary-fixed transition-colors duration-300 font-label-caps text-label-caps" href="#">All Works</a>
-<a class="text-secondary dark:text-on-secondary-container hover:text-primary dark:hover:text-on-primary-fixed transition-colors duration-300 font-label-caps text-label-caps" href="#">Indoor Elite</a>
-<a class="text-secondary dark:text-on-secondary-container hover:text-primary dark:hover:text-on-primary-fixed transition-colors duration-300 font-label-caps text-label-caps" href="#">Garden &amp; Outdoor</a>
-<a class="text-primary dark:text-on-primary-fixed font-bold border-b-2 border-primary font-label-caps text-label-caps" href="#">Our Studio</a>
+<body class="text-on-surface antialiased min-h-screen flex flex-col">
+
+<!-- ===== NAVBAR ===== -->
+<nav class="sticky top-0 w-full z-40 bg-surface/70 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm">
+<div class="max-w-[1440px] mx-auto px-5 md:px-16 flex items-center justify-between h-20">
+<div class="flex-shrink-0"><a class="font-display text-2xl text-primary tracking-tight" href="/" data-i18n="nav.home">AuraResin Studio</a></div>
+<div class="hidden md:flex flex-1 justify-center items-center space-x-8">
+<a class="text-secondary hover:text-primary font-body text-sm py-2 transition-opacity" href="/" data-i18n="nav.gallery">Gallery</a>
+<a class="text-secondary hover:text-primary font-body text-sm py-2 transition-opacity" href="/indoor-elite/" data-i18n="nav.indoor">Indoor Elite</a>
+<a class="text-secondary hover:text-primary font-body text-sm py-2 transition-opacity" href="/garden-outdoor/" data-i18n="nav.outdoor">Garden & Outdoor</a>
+<a class="text-primary font-semibold border-b-2 border-primary font-body text-sm py-2" href="#" data-i18n="nav.studio">Our Studio</a>
+<a class="text-secondary hover:text-primary font-body text-sm py-2 transition-opacity" href="/b2b-partnership/" data-i18n="nav.b2b">B2B Partnership</a>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1 bg-surface-container rounded-full p-1">
+<button class="lang-btn px-3 py-1 rounded-full text-[11px] font-label-caps font-semibold tracking-wide transition-all" data-lang="en">EN</button>
+<button class="lang-btn px-3 py-1 rounded-full text-[11px] font-label-caps font-semibold tracking-wide transition-all" data-lang="zh">中文</button>
+<button class="lang-btn px-3 py-1 rounded-full text-[11px] font-label-caps font-semibold tracking-wide transition-all" data-lang="fr">FR</button>
+<button class="lang-btn px-3 py-1 rounded-full text-[11px] font-label-caps font-semibold tracking-wide transition-all" data-lang="ru">RU</button>
+<button class="lang-btn px-3 py-1 rounded-full text-[11px] font-label-caps font-semibold tracking-wide transition-all" data-lang="ar">عربي</button>
+</div>
+<button class="text-primary hover:opacity-80 transition-opacity"><span class="material-symbols-outlined text-xl">shopping_bag</span></button>
+<button class="md:hidden text-primary" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"><span class="material-symbols-outlined text-xl">menu</span></button>
+</div>
+</div>
+<div id="mobile-menu" class="hidden md:hidden bg-surface border-t border-outline-variant/20 px-5 py-4 flex flex-col gap-4">
+<a class="font-label-caps text-sm text-secondary" href="/" data-i18n="nav.gallery">Gallery</a>
+<a class="font-label-caps text-sm text-secondary" href="/indoor-elite/" data-i18n="nav.indoor">Indoor Elite</a>
+<a class="font-label-caps text-sm text-secondary" href="/garden-outdoor/" data-i18n="nav.outdoor">Garden & Outdoor</a>
+<a class="font-label-caps text-sm font-semibold" href="#" data-i18n="nav.studio">Our Studio</a>
+<a class="font-label-caps text-sm text-secondary" href="/b2b-partnership/" data-i18n="nav.b2b">B2B Partnership</a>
+</div>
 </nav>
-<!-- Actions -->
-<div class="flex items-center gap-4">
-<button aria-label="shopping_bag" class="text-primary hover:opacity-80 transition-all">
-<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
-</button>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main class="flex-grow fade-in">
+<section class="mb-16 md:mb-24 text-center max-w-3xl mx-auto px-5 md:px-16 py-16 md:py-20">
+<h1 class="font-display text-4xl md:text-6xl text-primary mb-6" data-i18n="hero.title">Our Studio</h1>
+<p class="font-body text-lg text-secondary" data-i18n="hero.subtitle">AuraResin Studio is a boutique workshop dedicated to the art of hand-sculpted epoxy resin. We blend natural substrates with luminous resin to create timeless pieces that transform spaces.</p>
+</section>
+
+<!-- Studio Features -->
+<section class="mb-16 px-5 md:px-16 max-w-[1440px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="pure-card rounded-xl p-8 text-center">
+<div class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center mx-auto mb-6"><span class="material-symbols-outlined text-3xl text-primary">handyman</span></div>
+<h3 class="font-display text-xl text-primary mb-3" data-i18n="p1.title">Hand-Sculpted Craft</h3>
+<p class="font-body text-sm text-secondary" data-i18n="p1.subtitle">Every piece is carefully shaped by hand, ensuring unique contours and organic flow.</p>
 </div>
+<div class="pure-card rounded-xl p-8 text-center">
+<div class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center mx-auto mb-6"><span class="material-symbols-outlined text-3xl text-primary"> transparency</span></div>
+<h3 class="font-display text-xl text-primary mb-3" data-i18n="p2.title">Luminous Depth</h3>
+<p class="font-body text-sm text-secondary" data-i18n="p2.subtitle">Our resin captures and refracts light, creating living surfaces that evolve with their environment.</p>
 </div>
-</header>
-<main class="flex-grow w-full max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop pt-16 pb-32">
-<!-- Story Section -->
-<section class="mb-32">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
-<div class="lg:col-span-5 flex flex-col justify-center pr-0 lg:pr-12">
-<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-6">The Alchemy of Resin</h1>
-<p class="font-body-lg text-body-lg text-secondary mb-8">
-                        Founded in the pursuit of capturing light, AuraResin Studio elevates industrial epoxy into objects of quiet contemplation. Our process is a dialogue between precision control and fluid unpredictability, resulting in pieces that possess the clarity of glass and the permanence of stone.
-                    </p>
-<p class="font-body-md text-body-md text-secondary">
-                        Every pour is an unrepeatable event. We spend weeks preparing molds and refining pigments before the crucial casting phase. The curing process is closely monitored in our climate-controlled chamber, ensuring absolute optical clarity and structural integrity.
-                    </p>
-</div>
-<div class="lg:col-span-7 mt-12 lg:mt-0 relative">
-<div class="glass-panel rounded-xl overflow-hidden aspect-[4/3] relative">
-<img alt="Artisan pouring clear resin in a bright studio" class="w-full h-full object-cover rounded-t-none" data-alt="A meticulously organized, minimalist artist studio bathed in soft, high-key natural light from large windows. An artisan's hands are carefully pouring crystal clear liquid epoxy resin into a sleek geometric mold on a pristine white worktable. The setting is clean, modern, and architectural, utilizing a palette of pure whites, soft studio greys, and subtle metallic accents. The mood is focused and serene, capturing the exact moment of liquid creation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD48kTINWWV87x1owtJEkfd6IdEHYy9M0afrjUZQro6-JekYOiNfxMDXhjELQFT_5L91teT00i9hgpYjzadcId7uQQTkHLdaUMICbAEjGLUOQig7z-40W_e4Ze9Pyi8EZrXGy9xbEEGXuYYVGsJZMW-zH8cUjVIfiBr0bc6kf8APFjoxGmXbj4Iv-99CNJJCjvLZojNq7848NzRwUZZwMzh74sDEemD-fMYd7ZcDafRD23eL47Y_cafYxqUZJsdziRFx6hunfj64VI"/>
-</div>
-<!-- Small offset image -->
-<div class="absolute -bottom-16 -left-12 w-64 aspect-square glass-panel rounded-xl hidden md:block z-10 overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
-<img alt="Detail shot of cured resin texture" class="w-full h-full object-cover rounded-t-none" data-alt="An extreme close-up macro photograph of cured clear resin. The surface captures intricate light refractions and subtle internal depth, resembling polished architectural glass or ice. A very soft, minimal white light highlights the flawless edge, set against a pristine, soft studio grey background. The image emphasizes materiality, clarity, and minimalist luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZfSs-oVcfcgb5C1KM60Aoh5yjGdLV4iJDW_NPLoxY1nPlXp71bCvWnnJpHPs76fDh9Bf0k-OgKdOKdAkSso15E6mBEle_hVYpef-QGZXK_Mgs3saxjRiv4XlpzOf8Rh_0_emM6DJLycPg-u3eisbSI5cwyEJr5XwDXS8_RTd6VcdRPtQC3xS1kOW5m5R3SPvLLRH8pW2sUfAxK0rZ2VGntcOx35yxuc8sAh_3pTWJczlFXgGwSHfVgixgNUaWbQro3vrl7OsoFYc"/>
-</div>
+<div class="pure-card rounded-xl p-8 text-center">
+<div class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center mx-auto mb-6"><span class="material-symbols-outlined text-3xl text-primary">verified</span></div>
+<h3 class="font-display text-xl text-primary mb-3" data-i18n="p3.title">Premium Materials</h3>
+<p class="font-body text-sm text-secondary" data-i18n="p3.subtitle">We use only UV-stable, anti-yellowing resins rated for both indoor and outdoor installations.</p>
 </div>
 </div>
 </section>
-<!-- Contact Section -->
-<section class="mb-32">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
-<!-- Contact Form -->
-<div class="glass-panel p-8 md:p-12 rounded-xl">
-<h2 class="font-headline-md text-headline-md mb-2">Commission an Inquiry</h2>
-<p class="font-body-md text-body-md text-secondary mb-8">Begin a dialogue about custom pieces or gallery representation.</p>
-<form class="space-y-6">
-<div>
-<label class="block font-label-caps text-label-caps mb-2 text-on-surface-variant" for="name">Name</label>
-<input class="w-full bg-[#F5F5F7] border-0 rounded-lg px-4 py-3 font-body-md text-primary placeholder-outline focus:ring-1 focus:ring-primary focus:bg-surface-container-high transition-colors" id="name" placeholder="Jane Doe" type="text"/>
-</div>
-<div>
-<label class="block font-label-caps text-label-caps mb-2 text-on-surface-variant" for="email">Email</label>
-<input class="w-full bg-[#F5F5F7] border-0 rounded-lg px-4 py-3 font-body-md text-primary placeholder-outline focus:ring-1 focus:ring-primary focus:bg-surface-container-high transition-colors" id="email" placeholder="jane@example.com" type="email"/>
-</div>
-<div>
-<label class="block font-label-caps text-label-caps mb-2 text-on-surface-variant" for="message">Message</label>
-<textarea class="w-full bg-[#F5F5F7] border-0 rounded-lg px-4 py-3 font-body-md text-primary placeholder-outline focus:ring-1 focus:ring-primary focus:bg-surface-container-high transition-colors resize-none" id="message" placeholder="Describe your interest..." rows="4"></textarea>
-</div>
-<button class="w-full bg-[#111111] text-white font-button text-button py-4 rounded-xl hover:bg-black transition-colors" type="submit">
-                            Send Message
-                        </button>
-</form>
-</div>
-<!-- Location -->
-<div class="flex flex-col h-full pl-0 lg:pl-12 justify-between">
-<div class="mb-8 lg:mb-0">
-<h3 class="font-headline-sm text-headline-sm mb-4">Studio Location</h3>
-<p class="font-body-md text-body-md text-secondary mb-1">By appointment only.</p>
-<p class="font-body-md text-body-md text-primary font-medium">100 Gallery Row, Design District</p>
-<p class="font-body-md text-body-md text-primary font-medium">New York, NY 10001</p>
-<a class="inline-block mt-4 font-body-md text-body-md border-b border-primary text-primary hover:opacity-70 transition-opacity" href="mailto:studio@auraresin.com">studio@auraresin.com</a>
-</div>
-<div class="glass-panel rounded-xl overflow-hidden h-64 lg:h-80 w-full">
-<img alt="Map location" class="w-full h-full object-cover rounded-t-none grayscale opacity-80" data-alt="A highly stylized, minimalist map illustration of a sleek urban grid. The map uses a very restricted palette of crisp whites, soft studio greys, and pale silver tones to represent streets and blocks. There are no distracting colors or labels, just clean architectural lines and a subtle geometric marker indicating a location. The aesthetic is extremely refined, light-mode, and modern." data-location="New York" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQqIJ3nHVNJ4usApO8B_GoCwRCYtK1SzzBuLbquLJHNBvUI6NKkvVeP4XjEzNakHzDkRJIanDCtRrv6-MhniOChvn0JV_5V-4VVgYFdgWXg9AJ6lpQEOMmBGfnuPETqmNySpuTiNFKH94R3d3ibxsCFbdIiD-P_MAkAaFDQ1x4FpmKsfSEQbUcefCSdvbdm3Zo3qs0HqpiS_gXJ9t0Vgx4ovgMRuof2QbT64SZIiqaC1ha0lBQmloIkIMR_gLj8mMpMkob3foYrIc"/>
-</div>
-</div>
-</div>
-</section>
-<!-- FAQ Section -->
-<section>
-<div class="max-w-3xl mx-auto">
-<h2 class="font-headline-md text-headline-md text-center mb-12">Frequently Asked Questions</h2>
-<div class="space-y-4">
-<!-- FAQ Item 1 -->
-<div class="border-b border-outline-variant/30 pb-4">
-<button class="w-full text-left py-4 flex justify-between items-center group">
-<span class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors text-xl">How long does a custom commission take?</span>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">add</span>
-</button>
-</div>
-<!-- FAQ Item 2 -->
-<div class="border-b border-outline-variant/30 pb-4">
-<button class="w-full text-left py-4 flex justify-between items-center group">
-<span class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors text-xl">Are the pieces suitable for outdoor environments?</span>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">add</span>
-</button>
-</div>
-<!-- FAQ Item 3 -->
-<div class="border-b border-outline-variant/30 pb-4">
-<button class="w-full text-left py-4 flex justify-between items-center group">
-<span class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors text-xl">Do you handle international shipping?</span>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">add</span>
-</button>
-</div>
+
+<!-- Contact -->
+<section class="px-5 md:px-16 max-w-[1440px] mx-auto mb-20">
+<div class="pure-card rounded-xl p-8 md:p-12 text-center">
+<h2 class="font-display text-3xl text-primary mb-4" data-i18n="contact.title">Get in Touch</h2>
+<p class="font-body text-secondary mb-8 max-w-xl mx-auto" data-i18n="contact.subtitle">Interested in a custom commission or trade partnership? We'd love to hear from you.</p>
+<div class="flex flex-col md:flex-row justify-center gap-8">
+<div><span class="material-symbols-outlined text-2xl text-primary mb-2">email</span><p class="font-body text-sm">michael@carchina.ltd</p></div>
+<div><span class="material-symbols-outlined text-2xl text-primary mb-2">schedule</span><p class="font-body text-sm" data-i18n="contact.hours">Mon-Fri: 9:00 - 18:00 (UTC+8)</p></div>
 </div>
 </div>
 </section>
 </main>
-<!-- Footer -->
-<footer class="bg-tertiary dark:bg-tertiary-container w-full mt-auto">
-<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-gutter max-w-max-width mx-auto">
-<div class="font-display-lg text-headline-sm text-on-tertiary mb-4 md:mb-0">
-                AuraResin
-            </div>
-<div class="flex gap-6 mb-4 md:mb-0">
-<a class="font-label-caps text-label-caps text-on-tertiary-container hover:opacity-80 transition-opacity" href="#">Exclusive Drop Alert</a>
-<a class="font-label-caps text-label-caps text-on-tertiary-container hover:opacity-80 transition-opacity" href="#">Terms</a>
-<a class="font-label-caps text-label-caps text-on-tertiary-container hover:opacity-80 transition-opacity" href="#">Privacy</a>
+
+<!-- ===== FOOTER ===== -->
+<footer class="w-full mt-auto bg-primary pt-16 pb-8">
+<div class="max-w-[1440px] mx-auto px-5 md:px-16">
+<div class="glass-card bg-white/10 rounded-xl p-8 mb-16 border-white/20 text-center md:text-left flex flex-col md:flex-row items-center justify-between">
+<div class="mb-6 md:mb-0"><h4 class="font-display text-2xl text-on-primary mb-2" data-i18n="footer.alert">Exclusive Drop Alert</h4><p class="font-body text-sm text-on-primary/70" data-i18n="footer.alerttext">Be the first to know when new luminous depth pieces arrive.</p></div>
+<div class="flex w-full md:w-auto space-x-2"><input class="bg-surface-container/20 border border-white/30 rounded-lg px-4 py-3 text-on-primary placeholder-on-primary/50 focus:outline-none w-full md:w-64 font-body text-sm" placeholder="Your email address" type="email"/><button class="bg-white text-primary font-body text-sm px-6 py-3 rounded-lg hover:bg-surface-container transition-colors uppercase tracking-wider" data-i18n="footer.notify">Notify Me</button></div>
 </div>
-<div class="font-body-md text-body-md text-on-tertiary-container">
-                © 2024 AuraResin Studio. All rights reserved.
-            </div>
+<div class="w-full border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-display text-xl text-on-primary">AuraResin Studio</span>
+<div class="flex gap-6"><a class="font-label-caps text-[12px] text-on-primary/70 hover:text-on-primary transition-colors" href="#" data-i18n="footer.terms">Terms</a><a class="font-label-caps text-[12px] text-on-primary/70 hover:text-on-primary transition-colors" href="#" data-i18n="footer.privacy">Privacy</a></div>
+<span class="font-body text-sm text-on-primary/70">© 2024 AuraResin Studio. All rights reserved.</span>
+</div>
 </div>
 </footer>
-</body></html>
+
+<script>
+const i18n={en:{"nav.home":"AuraResin Studio","nav.gallery":"Gallery","nav.indoor":"Indoor Elite","nav.outdoor":"Garden & Outdoor","nav.studio":"Our Studio","nav.b2b":"B2B Partnership","hero.title":"Our Studio","hero.subtitle":"AuraResin Studio is a boutique workshop dedicated to the art of hand-sculpted epoxy resin. We blend natural substrates with luminous resin to create timeless pieces that transform spaces.","p1.title":"Hand-Sculpted Craft","p1.subtitle":"Every piece is carefully shaped by hand, ensuring unique contours and organic flow.","p2.title":"Luminous Depth","p2.subtitle":"Our resin captures and refracts light, creating living surfaces that evolve with their environment.","p3.title":"Premium Materials","p3.subtitle":"We use only UV-stable, anti-yellowing resins rated for both indoor and outdoor installations.","contact.title":"Get in Touch","contact.subtitle":"Interested in a custom commission or trade partnership? We'd love to hear from you.","contact.hours":"Mon-Fri: 9:00 - 18:00 (UTC+8)","footer.alert":"Exclusive Drop Alert","footer.alerttext":"Be the first to know when new luminous depth pieces arrive.","footer.notify":"Notify Me","footer.terms":"Terms","footer.privacy":"Privacy"},zh:{"nav.home":"AuraResin 工作室","nav.gallery":"艺术馆","nav.indoor":"室内精选","nav.outdoor":"花园户外","nav.studio":"我们的工作室","nav.b2b":"B2B 合作","hero.title":"我们的工作室","hero.subtitle":"AuraResin Studio 是一家专注于手工雕塑环氧树脂艺术的精品工作室。我们将天然基材与发光树脂结合，创造出改变空间的永恒作品。","p1.title":"手工雕塑工艺","p1.subtitle":"每件作品都经过精心手工塑形，确保独特的轮廓和有机流动。","p2.title":"光芒穿透深度","p2.subtitle":"我们的树脂捕捉和折射光线，创造出随环境变化的活力表面。","p3.title":"优质材料","p3.subtitle":"我们仅使用经过室内外安装认证的抗紫外线、抗黄变树脂。","contact.title":"联系我们","contact.subtitle":"对定制委托或贸易合作感兴趣？我们很乐意收到您的来信。","contact.hours":"周一至周五：9:00 - 18:00 (UTC+8)","footer.alert":"独家限量发售提醒","footer.alerttext":"抢先了解最新作品。","footer.notify":"通知我","footer.terms":"条款","footer.privacy":"隐私"},fr:{"nav.home":"AuraResin Studio","nav.gallery":"Galerie","nav.indoor":"Intérieurs d'Élite","nav.outdoor":"Jardin & Extérieur","nav.studio":"Notre Studio","nav.b2b":"Partenariat B2B","hero.title":"Notre Studio","hero.subtitle":"AuraResin Studio est un atelier de gamme dédié à l'art de la sculpture manuelle de résine époxy. Nous mélangeons des substrats naturels avec de la résine lumineuse pour créer des pièces intemporelles.","p1.title":"Artisanat Sculpté à la Main","p1.subtitle":"Chaque pièce est soigneusement façonnée à la main, assurant des contours uniques et un flux organique.","p2.title":"Profondeur Lumineuse","p2.subtitle":"Notre résine capture et réfracte la lumière, créant des surfaces vivantes qui évoluent avec leur environnement.","p3.title":"Matériaux Premium","p3.subtitle":"Nous utilisons uniquement des résines anti-UV et anti-jaunissement pour les installations intérieures et extérieures.","contact.title":"Contactez-nous","contact.subtitle":"Intéressé par une commande personnalisée ou un partenariat commercial? Nous serions ravis de vous entendre.","contact.hours":"Lun-Ven: 9h00 - 18h00 (UTC+8)","footer.alert":"Alerte Drop Exclusif","footer.alerttext":"Soyez le premier à acquérir nos dernières pièces.","footer.notify":"Me Notifier","footer.terms":"Conditions","footer.privacy":"Confidentialité"},ru:{"nav.home":"AuraResin Studio","nav.gallery":"Галерея","nav.indoor":"Элитные Интерьеры","nav.outdoor":"Сад и Уличные","nav.studio":"Наша Студия","nav.b2b":"B2B Партнёрство","hero.title":"Наша Студия","hero.subtitle":"AuraResin Studio — это бутиковая мастерская, посвящённая искусству ручной лепки эпоксидной смолы. Мы смешиваем натуральные подложки со светящейся смолой для создания вневременных произведений.","p1.title":"Ручное Мастерство","p1.subtitle":"Каждое изделие тщательно формируется вручную, обеспечивая уникальные контуры и органичный поток.","p2.title":"Световая Глубина","p2.subtitle":"Наша смола улавливает и преломляет свет, создавая живые поверхности, которые меняются вместе с окружением.","p3.title":"Премиальные Материалы","p3.subtitle":"Мы используем только УФ-стабильные, антижелтеющие смолы, рассчитанные на внутренние и наружные установки.","contact.title":"Свяжитесь с Нами","contact.subtitle":"Заинтересованы в индивидуальном заказе или торговом партнёрстве? Мы будем рады услышать от вас.","contact.hours":"Пн-Пт: 9:00 - 18:00 (UTC+8)","footer.alert":"Эксклюзивное Уведомление","footer.alerttext":"Будьте первым, кто узнает о новых работах.","footer.notify":"Уведомить Меня","footer.terms":"Условия","footer.privacy":"Конфиденциальность"},ar:{"nav.home":"AuraResin Studio","nav.gallery":"المعرض","nav.indoor":"داخلي","nav.outdoor":"حديقة وخارج","nav.studio":"الاستوديو","nav.b2b":"B2B شراكة","hero.title":"الاستوديو","hero.subtitle":"AuraResin Studio ورشة عملboutique مكرسة لفن النحت اليدوي من الراتنج الايبوكسي. نخلط الركائز الطبيعية مع الراتنج المضيء لخلق قطع خالدة.","p1.title":"الحرفية المنحوتة يدوياً","p1.subtitle":"كل قطعة يتم تشكيلها بعناية يدويًا، مما يضمن contours فريدة وتدفق عضوي.","p2.title":"عمق مضيء","p2.subtitle":"راتنجنا يلتقط ويحلل الضوء، مما يخلقsurfaces حية تتطور مع بيئتها.","p3.title":"مواد 프리미وم","p3.subtitle":"نستخدم فقط الراتنجات المقاومة للأشعة فوق البنفسجية المضادة للاصفرار للم التركيبات الداخلية والخارجية.","contact.title":"تواصل معنا","contact.subtitle":"مهتم بcommission مخصص أو شراكة تجارية؟ نود الاستماع منك.","contact.hours":"الإثنين-الجمعة: 9:00 - 18:00 (UTC+8)","footer.alert":"تنبيه منتج حصري","footer.alerttext":"كن أول من يعرف عن القطع الجديدة.","footer.notify":"أعلمني","footer.terms":"الشروط","footer.privacy":"الخصوصية"}};
+let currentLang=localStorage.getItem('auraresin-lang')||'en';
+function setLanguage(lang){currentLang=lang;localStorage.setItem('auraresin-lang',lang);document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.getAttribute('data-i18n');if(i18n[lang]&&i18n[lang][key])el.textContent=i18n[lang][key]});document.querySelectorAll('.lang-btn').forEach(btn=>{btn.classList.toggle('active',btn.dataset.lang===lang)});document.documentElement.dir=(lang==='ar')?'rtl':'ltr';document.documentElement.lang=lang}
+document.querySelectorAll('.lang-btn').forEach(btn=>btn.addEventListener('click',()=>setLanguage(btn.dataset.lang)));
+setLanguage(currentLang);
+</script>
+</body>
+</html>
