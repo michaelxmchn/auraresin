@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Garden &amp; Outdoor | AuraResin Studio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#e2e2e2",
+                      "on-secondary-fixed": "#1a1c1d",
+                      "surface": "#faf9fe",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-fixed": "#e5e2e1",
+                      "error": "#ba1a1a",
+                      "surface-bright": "#faf9fe",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "surface-container": "#eeedf3",
+                      "outline-variant": "#c4c7c7",
+                      "secondary-container": "#dfdfe1",
+                      "surface-variant": "#e3e2e7",
+                      "primary": "#000000",
+                      "inverse-on-surface": "#f1f0f5",
+                      "primary-container": "#1c1b1b",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "background": "#faf9fe",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "on-surface": "#1a1b1f",
+                      "on-primary-fixed": "#1c1b1b",
+                      "outline": "#747878",
+                      "surface-container-highest": "#e3e2e7",
+                      "on-secondary": "#ffffff",
+                      "on-surface-variant": "#444748",
+                      "on-primary-fixed-variant": "#474646",
+                      "surface-dim": "#dad9df",
+                      "secondary-fixed-dim": "#c6c6c8",
+                      "on-primary-container": "#858383",
+                      "secondary-fixed": "#e2e2e4",
+                      "secondary": "#5d5e60",
+                      "on-secondary-fixed-variant": "#454749",
+                      "surface-container-high": "#e9e7ed",
+                      "tertiary": "#000000",
+                      "surface-tint": "#5f5e5e",
+                      "inverse-primary": "#c8c6c5",
+                      "on-primary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "on-secondary-container": "#616365",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "on-error": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-container": "#838484",
+                      "inverse-surface": "#2f3034",
+                      "tertiary-container": "#1a1c1c",
+                      "surface-container-low": "#f4f3f8",
+                      "on-tertiary": "#ffffff",
+                      "on-background": "#1a1b1f"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "margin-mobile": "20px",
+                      "max-width": "1440px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-sm": [
+                              "Playfair Display"
+                      ],
+                      "display-lg-mobile": [
+                              "Playfair Display"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Playfair Display"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "button": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "button": [
+                              "14px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        body {
+            background-color: #faf9fe;
+            color: #1a1b1f;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(238, 238, 238, 0.5);
+            box-shadow: inset 1px 1px 0px 0px rgba(255,255,255,0.5), 0 10px 40px rgba(0,0,0,0.04);
+        }
+        
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 24px;
+        }
+        
+        @media (min-width: 768px) {
+            .masonry-grid {
+                column-count: 2;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .masonry-grid {
+                column-count: 3;
+            }
+        }
+        
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 24px;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md">
+<!-- TopNavBar -->
+<header class="bg-surface/70 backdrop-blur-xl docked full-width top-0 sticky z-40 border-b border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto py-4">
+<div class="font-display-lg text-headline-md text-primary font-bold tracking-tight">
+                AuraResin
+            </div>
+<nav class="hidden md:flex gap-8 items-center font-label-caps text-label-caps">
+<a class="text-secondary hover:text-primary transition-colors duration-300" href="#">All Works</a>
+<a class="text-secondary hover:text-primary transition-colors duration-300" href="#">Indoor Elite</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="#">Garden &amp; Outdoor</a>
+<a class="text-secondary hover:text-primary transition-colors duration-300" href="#">Our Studio</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-primary hover:opacity-80 scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col w-full px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto py-12 md:py-24">
+<!-- Header Section -->
+<section class="mb-16 md:mb-24 max-w-3xl">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">
+                Garden &amp; Outdoor | Elemental Durability
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                Weather-resistant architectural resin pieces designed to withstand the elements while maintaining clarity and structural integrity. Crafted for luxury exterior environments.
+            </p>
+</section>
+<!-- Filter/Action Bar -->
+<section class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
+<div class="flex flex-wrap gap-3">
+<button class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded-full hover:opacity-90 transition-opacity flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="filter_list">filter_list</span>
+                    Garden &amp; Outdoor
+                </button>
+<button class="bg-surface-container-lowest border border-outline-variant/30 text-on-surface font-label-caps text-label-caps px-6 py-3 rounded-full hover:bg-surface-container-low transition-colors">
+                    Large Scale
+                </button>
+<button class="bg-surface-container-lowest border border-outline-variant/30 text-on-surface font-label-caps text-label-caps px-6 py-3 rounded-full hover:bg-surface-container-low transition-colors">
+                    Water Features
+                </button>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[18px]" data-icon="sort">sort</span>
+                Sort by: Featured
+            </div>
+</section>
+<!-- Masonry Grid -->
+<section class="masonry-grid w-full">
+<!-- Card 1 -->
+<div class="masonry-item">
+<article class="glass-card rounded-xl overflow-hidden flex flex-col group">
+<div class="relative w-full aspect-square md:aspect-[4/5] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A large, translucent emerald green wave-shaped resin sculpture sitting on a wooden deck in a lush, sunlit garden setting. The sculpture catches the sunlight, revealing complex internal refractions and bubbles. The style is modern luxury, highlighting the interplay of natural light and glass-like materials." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6TPJhCRPJx6vm-bjxXoT3pNsAiWYckJh4o-dSdbu2rpX0erjsFEea5pknxTkbklrNMryI5cuI9LXU3hsB3PonwcIhxrQF33tUlax9eaEO_wgaxU5j_pz4xZ6m-oiZB8s2WIw_sM0rPAegGgWdissVifzsZ_uSuWAz0D1IELAdU2VUqLdcAkYb0nH2eqfI8DOc4clOJCs8nkle3JN3ADYMMpqBy6N0yaalPztJJUKLinOl9e_NpMFujxP4AyT9RR-PxOOHdXP4Wbs"/>
+<div class="absolute top-4 left-4 flex flex-col gap-2">
+<span class="bg-primary text-on-primary font-label-caps text-label-caps px-3 py-1 rounded-full shadow-md">Outdoor Safe</span>
+<span class="bg-surface-container-lowest/80 backdrop-blur-sm text-primary font-label-caps text-label-caps px-3 py-1 rounded-full shadow-md">UV-Resistant</span>
+</div>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Verdant Crest</h3>
+<span class="font-label-caps text-label-caps text-on-surface-variant mt-2">SKU: GO-8842</span>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-2">Monumental wave form cast in UV-stabilized emerald resin. Designed for heavy exterior exposure and direct sunlight.</p>
+</div>
+<div class="pt-4 border-t border-outline-variant/20 flex justify-between items-center mt-auto">
+<span class="font-label-caps text-label-caps text-on-surface-variant">ASTM E84 Rated</span>
+<button class="bg-primary text-on-primary font-button text-button px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity">
+                                Request Quote
+                            </button>
+</div>
+</div>
+</article>
+</div>
+<!-- Card 2 -->
+<div class="masonry-item">
+<article class="glass-card rounded-xl overflow-hidden flex flex-col group">
+<div class="relative w-full aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A heavy, organic bowl-shaped sculpture made of amber-colored resin with rough, natural stones fused into its base. Set against a pure white studio background with a slight reflection. The lighting is crisp and even, highlighting the contrast between the smooth polished resin and the raw, textured rocks." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtbKbJqSVBFl3g_C-e-sxOGGnydzAsKCsM9DvLbT-WibRM8xneHblOaKyMt5ypDfInEZSTp1Y6nDnpoPMHOKBjKsIoz9q_S_JQYL2B-n6QB4z0lUw0fJDXWGtf1hCRS-NjOznrXzaXln5aSrlOZPAQJ6hoNUtn12ymWDdLfEqR2vJw6V8U_BJwzysq7saQIjQAz-GFc6J53hlcLYhUblmwH7fHwbXEashPTIZ3cd_tbuFdEAPTJFZuyF8b8kbQl1SayZwQFaoRjgI"/>
+<div class="absolute top-4 left-4 flex flex-col gap-2">
+<span class="bg-primary text-on-primary font-label-caps text-label-caps px-3 py-1 rounded-full shadow-md">Weatherproof</span>
+</div>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Amber Geo-Fuse</h3>
+<span class="font-label-caps text-label-caps text-on-surface-variant mt-2">SKU: GO-7119</span>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-2">A functional architectural planter blending raw quarried stone with amber-tinted industrial epoxy. Frost resistant to -20°C.</p>
+</div>
+<div class="pt-4 border-t border-outline-variant/20 flex justify-between items-center mt-auto">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Heavy Duty Base</span>
+<button class="bg-primary text-on-primary font-button text-button px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity">
+                                Request Quote
+                            </button>
+</div>
+</div>
+</article>
+</div>
+<!-- Card 3 -->
+<div class="masonry-item">
+<article class="glass-card rounded-xl overflow-hidden flex flex-col group">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<div class="w-full h-full bg-surface-dim flex items-center justify-center">
+<span class="material-symbols-outlined text-outline text-[48px]" data-icon="landscape">landscape</span>
+</div>
+<div class="absolute top-4 left-4 flex flex-col gap-2">
+<span class="bg-primary text-on-primary font-label-caps text-label-caps px-3 py-1 rounded-full shadow-md">Installation Required</span>
+</div>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Glacial Monolith</h3>
+<span class="font-label-caps text-label-caps text-on-surface-variant mt-2">SKU: GO-9002</span>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-2">Towering vertical structure in frosted white resin. Engineered for high-wind loads in exposed coastal environments.</p>
+</div>
+<div class="pt-4 border-t border-outline-variant/20 flex justify-between items-center mt-auto">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Wind Load Certified</span>
+<button class="bg-primary text-on-primary font-button text-button px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity">
+                                Request Quote
+                            </button>
+</div>
+</div>
+</article>
+</div>
+<!-- Card 4 -->
+<div class="masonry-item">
+<article class="glass-card rounded-xl overflow-hidden flex flex-col group">
+<div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden">
+<div class="w-full h-full bg-surface-dim flex items-center justify-center">
+<span class="material-symbols-outlined text-outline text-[48px]" data-icon="water_drop">water_drop</span>
+</div>
+<div class="absolute top-4 left-4 flex flex-col gap-2">
+<span class="bg-primary text-on-primary font-label-caps text-label-caps px-3 py-1 rounded-full shadow-md">Water Feature</span>
+<span class="bg-surface-container-lowest/80 backdrop-blur-sm text-primary font-label-caps text-label-caps px-3 py-1 rounded-full shadow-md">Algae Resistant</span>
+</div>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Obsidian Cascade</h3>
+<span class="font-label-caps text-label-caps text-on-surface-variant mt-2">SKU: GO-4431</span>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-2">Integrated fountain system cast in deep black resin with embedded hydro-channels. Includes commercial grade pump housing.</p>
+</div>
+<div class="pt-4 border-t border-outline-variant/20 flex justify-between items-center mt-auto">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Self-Contained</span>
+<button class="bg-primary text-on-primary font-button text-button px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity">
+                                Request Quote
+                            </button>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Load More -->
+<div class="w-full flex justify-center mt-12">
+<button class="border border-primary text-primary font-button text-button px-8 py-3 rounded-full hover:bg-primary hover:text-on-primary transition-colors duration-300">
+                Load More Exhibits
+            </button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-tertiary full-width">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-gutter max-w-max-width mx-auto gap-8 md:gap-0">
+<div class="font-display-lg text-headline-sm text-on-tertiary">
+                AuraResin Studio
+            </div>
+<div class="flex flex-col md:flex-row items-center gap-6 font-label-caps text-label-caps text-on-tertiary-container">
+<a class="hover:text-on-tertiary transition-colors" href="#">Exclusive Drop Alert</a>
+<a class="hover:text-on-tertiary transition-colors" href="#">Terms</a>
+<a class="hover:text-on-tertiary transition-colors" href="#">Privacy</a>
+</div>
+<div class="font-body-md text-body-md text-on-tertiary-container text-sm">
+                © 2024 AuraResin Studio. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>

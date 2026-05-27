@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Indoor Elite | Architectural Statements - AuraResin Studio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-secondary-fixed": "#1a1c1d",
+                        "surface": "#faf9fe",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#e5e2e1",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#faf9fe",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "surface-container": "#eeedf3",
+                        "outline-variant": "#c4c7c7",
+                        "secondary-container": "#dfdfe1",
+                        "surface-variant": "#e3e2e7",
+                        "primary": "#000000",
+                        "inverse-on-surface": "#f1f0f5",
+                        "primary-container": "#1c1b1b",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "background": "#faf9fe",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-surface": "#1a1b1f",
+                        "on-primary-fixed": "#1c1b1b",
+                        "outline": "#747878",
+                        "surface-container-highest": "#e3e2e7",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#444748",
+                        "on-primary-fixed-variant": "#474646",
+                        "surface-dim": "#dad9df",
+                        "secondary-fixed-dim": "#c6c6c8",
+                        "on-primary-container": "#858383",
+                        "secondary-fixed": "#e2e2e4",
+                        "secondary": "#5d5e60",
+                        "on-secondary-fixed-variant": "#454749",
+                        "surface-container-high": "#e9e7ed",
+                        "tertiary": "#000000",
+                        "surface-tint": "#5f5e5e",
+                        "inverse-primary": "#c8c6c5",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#616365",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#838484",
+                        "inverse-surface": "#2f3034",
+                        "tertiary-container": "#1a1c1c",
+                        "surface-container-low": "#f4f3f8",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#1a1b1f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "max-width": "1440px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Playfair Display"],
+                        "label-caps": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "button": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "button": ["14px", { "lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #faf9fe; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+        }
+        .resin-card {
+            background: #ffffff;
+            border: 1px solid #eeeeee;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .resin-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 48px rgba(0,0,0,0.06);
+        }
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 24px;
+        }
+        @media (min-width: 768px) {
+            .masonry-grid { column-count: 2; }
+        }
+        @media (min-width: 1024px) {
+            .masonry-grid { column-count: 3; }
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 24px;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface antialiased">
+<!-- TopNavBar -->
+<header class="bg-surface/70 backdrop-blur-xl full-width top-0 sticky z-40 border-b border-outline-variant/30 shadow-sm flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto py-4">
+<div class="font-display-lg text-headline-md text-primary tracking-tight">AuraResin</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors duration-300" href="#">All Works</a>
+<a class="font-label-caps text-label-caps text-primary font-bold border-b-2 border-primary pb-1" href="#">Indoor Elite</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors duration-300" href="#">Garden &amp; Outdoor</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors duration-300" href="#">Our Studio</a>
+</nav>
+<div class="flex items-center gap-4 text-primary">
+<button class="hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</header>
+<main class="w-full max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-16">
+<!-- Hero Section -->
+<section class="mb-20 text-center max-w-3xl mx-auto">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">Indoor Elite<br/><span class="text-secondary font-headline-sm text-headline-sm">Architectural Statements</span></h1>
+<p class="font-body-lg text-body-lg text-secondary">Bespoke resin commissions for high-traffic corporate lobbies, hospitality suites, and luxury residential interiors.</p>
+</section>
+<!-- Filter / Utility Bar -->
+<div class="flex flex-col md:flex-row justify-between items-center mb-12 glass-panel rounded-full px-6 py-3">
+<div class="flex gap-4 overflow-x-auto w-full md:w-auto pb-4 md:pb-0 hide-scrollbar">
+<button class="font-button text-button bg-primary text-on-primary px-6 py-2 rounded-full flex-shrink-0">All Indoor</button>
+<button class="font-button text-button text-secondary hover:text-primary px-6 py-2 rounded-full transition-colors flex-shrink-0">Corporate Lobbies</button>
+<button class="font-button text-button text-secondary hover:text-primary px-6 py-2 rounded-full transition-colors flex-shrink-0">Hospitality Suites</button>
+<button class="font-button text-button text-secondary hover:text-primary px-6 py-2 rounded-full transition-colors flex-shrink-0">Residential</button>
+</div>
+<div class="flex items-center gap-2 mt-4 md:mt-0 text-secondary">
+<span class="font-label-caps text-label-caps">Sort By</span>
+<span class="material-symbols-outlined text-sm">tune</span>
+</div>
+</div>
+<!-- Masonry Grid -->
+<div class="masonry-grid">
+<!-- Card 1 (Tall Pillar) -->
+<article class="masonry-item resin-card rounded-xl overflow-hidden flex flex-col">
+<div class="relative w-full pt-[120%] bg-surface-container-low">
+<img alt="A tall, slender resin pillar sculpture with swirling blue and gold patterns, standing in a brightly lit modern gallery space with soft white walls and minimal shadows. The lighting is ethereal and high-key." class="absolute inset-0 w-full h-full object-cover object-center" data-alt="A tall, slender resin pillar sculpture with swirling blue and gold patterns, standing in a brightly lit modern gallery space with soft white walls and minimal shadows. The lighting is ethereal and high-key. High-end minimal glassmorphism aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSkVNfMpsYFM5yLYn4ZKNWZAg5Ddj5c0Plqse_igYPHKgManE_-4uCgNgfxcpxcTpuV7_25fACkOxrmc41xVWUrkNRhJRucqzDyhKkqcq3pN6MnqZq5FuRCw1_N4ZfpuV8uJPRJQjNw-ttbRqjEZT_Re6FwgkyaWY5syPT6nCKb0mzHUrSI0BKOSKvSDL0yp0ipCdvbl_kXzj_N4qyHEsnbV8vXPNI11Fs5zUIlx5g5bGoDsJKwTqvg0s1ERumWndDktjUOoZXUzM"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Azure Monolith</h3>
+<p class="font-label-caps text-label-caps text-secondary">SKU: IE-7042</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mb-8 mt-auto">
+<span class="bg-primary text-on-primary font-label-caps text-label-caps px-3 py-1 rounded-full">Heavily Weighted Base</span>
+<span class="bg-surface-variant text-on-surface-variant font-label-caps text-label-caps px-3 py-1 rounded-full">UV Resistant</span>
+</div>
+<button class="w-full glass-panel font-button text-button text-primary py-3 rounded-lg hover:bg-surface-container transition-colors">Request Quote</button>
+</div>
+</article>
+<!-- Card 2 (Desk Ornament) -->
+<article class="masonry-item resin-card rounded-xl overflow-hidden flex flex-col">
+<div class="relative w-full pt-[80%] bg-surface-container-low">
+<img alt="A clear, heavy resin desk ornament with white smoke-like wisps suspended inside, sitting on a pristine white pedestal in a stark white gallery. Minimalist aesthetic." class="absolute inset-0 w-full h-full object-cover object-center" data-alt="A clear, heavy resin desk ornament with white smoke-like wisps suspended inside, sitting on a pristine white pedestal in a stark white gallery. Minimalist aesthetic. Clean lines, quiet luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl5IHMfuw3fpnaXBLTgycrm-gJKGDRm2Qxd2isVqZkl_-yw8X_FF2FZCggUQz1Qsvlf8AabUiSAbXH_Sv2A5k3o15jBSSClA_BnRvDHePie2_F9qrK_b2kUb3y6xFHCZ16oFsRtklB_j3c8DmOYknSmQgl589Blqp5kg3l-uGHaP3s77SQ2sqb1v2YR9iKFGUiltXENeF1QyR1nvAA488bSlwhgMaCwlSQ4yZYMsxx3wpi2y_MH9OuuLEuehHY9yvJTGKEuNvcTm0"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Ethereal Paperweight</h3>
+<p class="font-label-caps text-label-caps text-secondary">SKU: IE-1190</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mb-8 mt-auto">
+<span class="bg-primary text-on-primary font-label-caps text-label-caps px-3 py-1 rounded-full">Executive Suite</span>
+</div>
+<button class="w-full glass-panel font-button text-button text-primary py-3 rounded-lg hover:bg-surface-container transition-colors">Request Quote</button>
+</div>
+</article>
+<!-- Card 3 (Wall Panel) -->
+<article class="masonry-item resin-card rounded-xl overflow-hidden flex flex-col">
+<div class="relative w-full pt-[100%] bg-surface-container-low">
+<div class="absolute inset-0 w-full h-full bg-gradient-to-br from-gray-200 to-gray-50 flex items-center justify-center text-secondary font-label-caps text-label-caps">
+                        Custom Panel View
+                    </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Obsidian Fracture Panel</h3>
+<p class="font-label-caps text-label-caps text-secondary">SKU: IE-8821</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mb-8 mt-auto">
+<span class="bg-primary text-on-primary font-label-caps text-label-caps px-3 py-1 rounded-full">Integrated LED Illumination</span>
+<span class="bg-surface-variant text-on-surface-variant font-label-caps text-label-caps px-3 py-1 rounded-full">French Cleat Mount</span>
+</div>
+<button class="w-full glass-panel font-button text-button text-primary py-3 rounded-lg hover:bg-surface-container transition-colors">Request Quote</button>
+</div>
+</article>
+<!-- Card 4 (Large Installation) -->
+<article class="masonry-item resin-card rounded-xl overflow-hidden flex flex-col">
+<div class="relative w-full pt-[130%] bg-surface-container-low">
+<div class="absolute inset-0 w-full h-full bg-gradient-to-tr from-stone-100 to-white flex items-center justify-center text-secondary font-label-caps text-label-caps border-b border-outline-variant/20">
+                       Lobby Installation View
+                   </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Cascading Amber</h3>
+<p class="font-label-caps text-label-caps text-secondary">SKU: IE-9902</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mb-8 mt-auto">
+<span class="bg-primary text-on-primary font-label-caps text-label-caps px-3 py-1 rounded-full">Multi-Piece Setup</span>
+</div>
+<button class="w-full glass-panel font-button text-button text-primary py-3 rounded-lg hover:bg-surface-container transition-colors">Request Quote</button>
+</div>
+</article>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-tertiary text-on-tertiary flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-gutter max-w-max-width mx-auto">
+<div class="font-display-lg text-headline-sm text-on-tertiary mb-4 md:mb-0">
+            AuraResin Studio
+        </div>
+<div class="flex gap-6 mb-4 md:mb-0">
+<a class="font-label-caps text-label-caps text-on-tertiary-container hover:opacity-80 transition-opacity" href="#">Exclusive Drop Alert</a>
+<a class="font-label-caps text-label-caps text-on-tertiary-container hover:opacity-80 transition-opacity" href="#">Terms</a>
+<a class="font-label-caps text-label-caps text-on-tertiary-container hover:opacity-80 transition-opacity" href="#">Privacy</a>
+</div>
+<div class="font-body-md text-body-md text-on-tertiary-container">
+            © 2024 AuraResin Studio. All rights reserved.
+        </div>
+</footer>
+</body></html>
